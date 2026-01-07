@@ -1,0 +1,140 @@
+(lenses-visibility-control)=
+# Lenses & Visibility Control
+
+This document defines **lenses** as grammar-level instruments for controlling *visibility* without altering underlying structure. It clarifies how lenses operate, how they differ from operators and representations, and how misuse of lenses produces predictable failure modes.
+
+Lenses do **not** act on reality. They determine **what distinctions are legible**.
+
+---
+
+## 0. Orientation
+
+- A lens changes *what is seen*, not *what is real*.
+- Lenses are admissible only if removing them leaves underlying structure unchanged.
+- Visibility control is upstream of evaluation, optimization, and explanation.
+
+This document is a **discipline guide**, not an epistemology.
+
+---
+
+## 1. Visibility as a Structural Property
+
+### Visibility
+
+Visibility refers to which distinctions are resolvable under a given configuration of constraints, lenses, and bookkeeping.
+
+- Visibility is not attention or perception.
+- Visibility is not truth.
+- Visibility is a property of structural alignment.
+
+Changes in visibility do not imply changes in structure.
+
+---
+
+## 2. What a Lens Is
+
+### Definition
+
+A **lens** is a grammar-level construct that:
+- selects distinctions,
+- suppresses others,
+- and stabilizes a view,
+
+**without performing transformation, projection, or evaluation**.
+
+A lens may *contain* representations or mappings, but only as passive views.
+
+---
+
+## 3. What a Lens Is Not
+
+A lens is **not**:
+- an operator (it does not act),
+- a measurement (it does not interact),
+- a projection (it does not discard),
+- an evaluation (it does not narrow),
+- a model (it does not claim adequacy),
+- an authority (it does not decide).
+
+Confusing any of these with a lens is a grammar-level error.
+
+---
+
+## 4. Types of Lenses (Non-Exhaustive)
+
+These categories are descriptive, not taxonomic.
+
+### Structural Lenses
+
+- Make roles and relations visible
+- Common in grammar construction
+
+### Representational Lenses
+
+- Emphasize specific encodings or descriptors
+- Often mistaken for reality
+
+### Mathematical / Formal Lenses
+
+- Highlight invariants or symmetries
+- Risk reification under pressure
+
+### Diagnostic Lenses
+
+- Surface failure modes or instability
+- Often invisible when functioning correctly
+
+---
+
+## 5. Lens Hardening and Failure Modes
+
+### Lens Hardening
+
+Lens hardening occurs when a lens:
+- becomes implicit,
+- stops being adjustable,
+- and is treated as structure itself.
+
+### Resulting Failures
+
+- Representational literalism
+- Bookkeeping-to-mechanism promotion
+- Boundary misattribution
+
+---
+
+## 6. Lenses and Inquiry
+
+- Inquiry may involve *changing lenses* without evaluation
+- Lens change is not progress; it is reorientation
+- Multiple lenses may coexist without contradiction
+
+Premature fixation of a lens accelerates collapse.
+
+---
+
+## 7. Lenses and Collapse
+
+- Collapse often coincides with unacknowledged lens hardening
+- When alternatives disappear, check whether visibility—not structure—was reduced
+
+Branching frequently occurs through lens adjustment rather than new structure.
+
+---
+
+## 8. Common Misattributions
+
+- Treating a lens as a mechanism
+- Treating visibility as causation
+- Treating invariance under a lens as universality
+
+Each misattribution converts a passive instrument into an active claim.
+
+---
+
+## Status
+
+Field Guide Draft v0.1
+
+Lenses should remain adjustable. Their failure is to become invisible.
+

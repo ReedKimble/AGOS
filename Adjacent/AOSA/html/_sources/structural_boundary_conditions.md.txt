@@ -1,0 +1,225 @@
+(structural-boundary-conditions)=
+# Structural Boundary Conditions
+
+This document identifies **structural boundary conditions** as they appear through repeated failure modes. These are not theoretical limits, paradoxes, or mysteries. They are *admissibility boundaries* revealed under pressure.
+
+Boundary conditions do not add information. They **remove admissible moves**.
+
+This document functions as a **field guide**, not an explanation.
+
+---
+
+## 0. How to Read This Document
+
+- Each boundary is defined **by the failure modes that reveal it**, not by theory.
+- Boundaries are **upstream of domains** and therefore cannot be fully articulated from within any single domain.
+- Encountering a boundary is not an insight; it is a **signal of misplacement**.
+- Boundaries point *upstream*, never sideways.
+
+---
+
+## 1. Articulation Boundary
+
+### Description
+
+The boundary encountered when a grammar attempts to describe the conditions that make articulation possible.
+
+### Revealed By Failure Modes
+
+- Self-reference paradoxes
+- Incompleteness claims misread as depth
+- Infinite regress in definition
+- Ontology smuggling at foundations
+
+### Structural Diagnosis
+
+- Articulation-first grammars cannot recover recognition-first structure.
+- Attempts to do so reify limits as objects or truths.
+
+### Typical Misattribution
+
+- Treating paradox as a domain-level insight
+- Treating inexpressibility as metaphysical mystery
+
+---
+
+## 2. Domain Closure Boundary
+
+### Description
+
+The boundary encountered when a domain treats its own grammar as complete.
+
+### Revealed By Failure Modes
+
+- Claims of final theories
+- Universal formalisms
+- Totalizing explanatory frameworks
+
+### Structural Diagnosis
+
+- Domains require closure for survival but cannot justify it internally.
+
+### Typical Misattribution
+
+- Elevating internal sufficiency to external authority
+
+---
+
+## 3. Boundary Misattribution (Primary Grammar Failure)
+
+### Description
+
+The boundary encountered when signals of constraint are mistaken for new content.
+
+### Revealed By Failure Modes
+
+- Hidden variables
+- Emergent metaphysics
+- Deep explanation inflation
+
+### Structural Diagnosis
+
+- Boundaries reduce admissible moves; they do not extend inquiry.
+
+### Typical Misattribution
+
+- Treating limits as discoveries at the same level of inquiry
+
+---
+
+## 4. Extrapolation Boundary
+
+### Description
+
+The boundary encountered when domain structures are projected beyond their admissible regime.
+
+### Revealed By Failure Modes
+
+- Reductionism overreach
+- Metaphorical universality
+- Category collapse across scales
+
+### Structural Diagnosis
+
+- Extrapolation preserves grammar but abandons admissibility.
+
+### Typical Misattribution
+
+- Confusing structural similarity with identity
+
+---
+
+## 5. Bookkeeping Boundary
+
+### Description
+
+The boundary encountered when records or representations are treated as causal.
+
+### Revealed By Failure Modes
+
+- Model reification
+- Data-as-reality claims
+- Algorithmic authority
+
+### Structural Diagnosis
+
+- Bookkeeping extends memory but cannot ground causality.
+
+### Typical Misattribution
+
+- Treating persistence as mechanism
+
+---
+
+## 6. Cross-Domain Translation Boundary
+
+### Description
+
+The boundary encountered when grammars are translated without loss declaration.
+
+### Revealed By Failure Modes
+
+- Interdisciplinary synthesis failures
+- Forced unification
+- Conceptual overloading
+
+### Structural Diagnosis
+
+- Cross-domain articulation necessarily incurs loss.
+
+### Typical Misattribution
+
+- Assuming mutual intelligibility implies equivalence
+
+---
+
+## 7. Authority Boundary
+
+### Description
+
+The boundary encountered when structural guidance becomes prescriptive power.
+
+### Revealed By Failure Modes
+
+- Methodological policing
+- Epistemic gatekeeping
+- Tool-to-authority escalation
+
+### Structural Diagnosis
+
+- Structure constrains; authority enforces.
+
+### Typical Misattribution
+
+- Treating admissibility as correctness
+
+---
+
+## 8. Collapse Visibility Boundary
+
+### Description
+
+The boundary encountered when collapse occurs without declaration.
+
+### Revealed By Failure Modes
+
+- Irreversible narrowing unnoticed by practitioners
+- Silent loss of alternatives
+
+### Structural Diagnosis
+
+- Collapse is invisible from within the grammar that caused it.
+
+### Typical Misattribution
+
+- Treating collapse as convergence or proof
+
+---
+
+## 9. Recognition–Articulation Boundary
+
+### Description
+
+The boundary between stabilized structure and its first admissible expression.
+
+### Revealed By Failure Modes
+
+- Overformalized cognition models
+- Language-first explanations of thought
+
+### Structural Diagnosis
+
+- Recognition precedes articulation structurally.
+
+### Typical Misattribution
+
+- Treating articulation as origin
+
+---
+
+## Status
+
+Field Guide Draft v0.1
+
+Boundaries are expected to be refined by use, not by theory.
+

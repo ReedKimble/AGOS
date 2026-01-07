@@ -1,0 +1,121 @@
+# Atlas Index
+
+This index is generated from canonical term nodes in `dictionary.md`.
+It is a navigation surface (bookkeeping), not an authority claim.
+
+## A
+
+- {ref}`Absence <term-absence>`
+- {ref}`Admissibility <term-admissibility>`
+- {ref}`Alignment <term-alignment>`
+- {ref}`Approximation <term-approximation>`
+- {ref}`Approximation Reification <term-approximation-reification>`
+- {ref}`Asymmetry <term-asymmetry>`
+- {ref}`Attraction <term-attraction>`
+- {ref}`Authority <term-authority>`
+- {ref}`Authority Capture <term-authority-capture>`
+
+## B
+
+- {ref}`Binding <term-binding>`
+- {ref}`Bookkeeping <term-bookkeeping>`
+- {ref}`Bookkeeping-to-Mechanism Promotion <term-bookkeeping-to-mechanism-promotion>`
+- {ref}`Boundary <term-boundary>`
+- {ref}`Branching <term-branching>`
+
+## C
+
+- {ref}`Coherence <term-coherence>`
+- {ref}`Collapse <term-collapse>`
+- {ref}`Constraint <term-constraint>`
+- {ref}`Containment <term-containment>`
+- {ref}`Coupling <term-coupling>`
+
+## D
+
+- {ref}`Declaration <term-declaration>`
+- {ref}`Descent <term-descent>`
+- {ref}`Descriptor <term-descriptor>`
+- {ref}`Descriptor–Primitive Confusion <term-descriptorprimitive-confusion>`
+- {ref}`Differentiation <term-differentiation>`
+- {ref}`Domain <term-domain>`
+- {ref}`Domain Marriage <term-domain-marriage>`
+- {ref}`Drift <term-drift>`
+
+## E
+
+- {ref}`Edge <term-edge>`
+- {ref}`Emergence <term-emergence>`
+- {ref}`Evaluation <term-evaluation>`
+
+## F
+
+- {ref}`Failure Mode <term-failure-mode>`
+- {ref}`Fallacy <term-fallacy>`
+
+## G
+
+- {ref}`Grammar <term-grammar>`
+
+## I
+
+- {ref}`Immunity <term-immunity>`
+- {ref}`Incentive <term-incentive>`
+- {ref}`Invariance <term-invariance>`
+
+## L
+
+- {ref}`Layer Collapse <term-layer-collapse>`
+- {ref}`Leakage <term-leakage>`
+- {ref}`Lens <term-lens>`
+- {ref}`Loss of Freedom <term-loss-of-freedom>`
+
+## M
+
+- {ref}`Measurement <term-measurement>`
+- {ref}`Mechanism (claimed) <term-mechanism-claimed>`
+- {ref}`Misattribution <term-misattribution>`
+- {ref}`Model <term-model>`
+
+## N
+
+- {ref}`Narrative Gravity <term-narrative-gravity>`
+- {ref}`Non-Closure <term-non-closure>`
+- {ref}`Non-Invention <term-non-invention>`
+
+## O
+
+- {ref}`Operator <term-operator>`
+- {ref}`Optimization <term-optimization>`
+
+## P
+
+- {ref}`Policy <term-policy>`
+- {ref}`Premature Closure <term-premature-closure>`
+- {ref}`Pressure <term-pressure>`
+- {ref}`Primitive (assumed) <term-primitive-assumed>`
+- {ref}`Protodomain <term-protodomain>`
+
+## R
+
+- {ref}`Representation <term-representation>`
+- {ref}`Representational Literalism <term-representational-literalism>`
+
+## S
+
+- {ref}`Scope Inflation <term-scope-inflation>`
+- {ref}`Selection Pressure <term-selection-pressure>`
+- {ref}`Stability <term-stability>`
+- {ref}`State Change <term-state-change>`
+- {ref}`Structural Role <term-structural-role>`
+
+## T
+
+- {ref}`Threshold <term-threshold>`
+- {ref}`Tradeoff <term-tradeoff>`
+- {ref}`Transition <term-transition>`
+
+## V
+
+- {ref}`Visibility <term-visibility>`
+- {ref}`Visibility Condition <term-visibility-condition>`

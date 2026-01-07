@@ -1,0 +1,180 @@
+(inquiry-and-evaluation)=
+# Inquiry and Evaluation
+
+This document clarifies the structural distinction between **questions**, **inquiry**, and **evaluation**, and shows why confusing them reliably produces paradox, false depth, and premature closure.
+
+The purpose here is not pedagogical clarity, but **admissibility control**: to prevent grammar-level misuse that appears insightful while actually collapsing structure.
+
+---
+
+## 0. Orientation
+
+- A *question* may emerge without intent or effort.
+- *Inquiry* is an active process that applies effort under constraint.
+- *Evaluation* is not inquiry; it is **narrowing by exclusion**.
+
+Failing to separate these produces many of the most common structural errors across domains.
+
+---
+
+## 1. Questions (Emergent, Non-Operative)
+
+### Description
+
+A **question** is an emergent articulation of unresolved structure. It does not act. It does not demand resolution. It introduces *no pressure* by itself.
+
+Questions arise when:
+- structure is partially coherent,
+- distinctions are visible but not stabilized,
+- and no admissible narrowing has yet occurred.
+
+### Structural Properties
+
+- Requires no action
+- Does not reduce admissible alternatives
+- Does not assert truth or falsity
+- May remain open indefinitely without error
+
+### Common Misuse
+
+- Treating the existence of a question as a demand for an answer
+- Treating unanswered questions as defects
+
+---
+
+## 2. Inquiry (Active, Effortful)
+
+### Description
+
+**Inquiry** is the active process of exploring structure under constraint. It applies effort, attention, and method, but does **not** decide outcomes.
+
+Inquiry may:
+- explore alternatives,
+- test coherence,
+- reveal boundaries,
+- or surface failure modes.
+
+Inquiry does *not* determine truth. It only makes structure legible.
+
+### Structural Properties
+
+- Requires effort and time
+- May increase or decrease visible alternatives
+- Can encounter boundaries or failure
+- Does not itself close questions
+
+### Common Misuse
+
+- Treating inquiry as proof
+- Treating exploration as validation
+
+---
+
+## 3. Evaluation (Narrowing by Exclusion)
+
+### Description
+
+**Evaluation** is the act of narrowing admissible alternatives. Structurally, evaluation can only occur by **exclusion**, not by positive assertion.
+
+Evaluation always incurs loss.
+
+This loss may be:
+- declared (explicitly acknowledged), or
+- undeclared (resulting in collapse).
+
+### Structural Properties
+
+- Always reduces possibility space
+- Is irreversible within the same regime
+- Cannot generate new structure
+- Must be scoped and declared to remain admissible
+
+### Common Misuse
+
+- Treating evaluation as discovery
+- Treating narrowing as explanation
+
+---
+
+## 4. Failure Modes from Conflation
+
+When questions, inquiry, and evaluation are not properly separated, predictable failures occur.
+
+### Question → Evaluation Collapse
+
+- An emergent question is treated as requiring immediate judgment
+- Results in premature closure
+
+### Inquiry → Evaluation Collapse
+
+- Exploration is mistaken for proof
+- Results in false certainty
+
+### Question → Inquiry Enforcement
+
+- Questions are framed as obligations
+- Results in authority pressure and policing
+
+---
+
+## 5. Why Evaluation Can Only Be Negative
+
+Evaluation cannot proceed by positive assertion without violating non-invention.
+
+This can be seen through a minimal example.
+
+---
+
+## 6. Example: "I Am False" vs "I Am Not True"
+
+### Case A: Positive Assertion — "I am false"
+
+This statement makes a **positive claim** about its own status.
+
+If we ask:
+- "Are you true?"
+- "Are you false?"
+
+Both inquiries force the statement into a contradictory position. The evaluation attempts to *assert* truth or falsity, generating paradox.
+
+The failure does not arise from logic itself, but from **positive self-assertion at an upstream level**.
+
+### Case B: Negative Constraint — "I am not true"
+
+This statement does **not** assert falsity. It only excludes one possibility.
+
+If we ask:
+- "Are you true?"
+
+The response "I am not true" is coherent.
+
+If we ask:
+- "Are you false?"
+
+The response still excludes truth but does not assert falsity. No contradiction is forced.
+
+### Structural Interpretation
+
+- "I am false" attempts evaluation by assertion
+- "I am not true" performs evaluation by exclusion
+
+Only the second is admissible upstream.
+
+(Math notation may formalize this distinction, but it is not required to see it.)
+
+---
+
+## 7. Implications for Inquiry
+
+- Inquiry must remain open-ended until evaluation is explicitly invoked
+- Evaluation must be recognized as narrowing, not explanation
+- Paradox often signals premature or mis-scoped evaluation
+
+---
+
+## Status
+
+Field Guide Draft v0.1
+
+This document constrains how questions, inquiry, and evaluation may be mixed without collapse.
+

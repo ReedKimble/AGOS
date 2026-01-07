@@ -1,0 +1,233 @@
+(internal-track-system)=
+# Internal Track System
+
+Purpose: make structure visible without prose explanation and allow bookkeeping activities.
+
+---
+
+## 0. Purpose of the Track System
+
+The track system exists to make *structure visible without prose explanation*.
+
+Tracks are **not annotations**, **not citations**, and **not metadata**. They are *structural declarations* that constrain how an entry may be used, related, or extended.
+
+An entry is not complete when it is defined; it is complete when its **tracks are coherent**.
+
+---
+
+## 1. Design Constraints (Non-Negotiable)
+
+The track system MUST:
+
+- Be ASCII-only and typable
+- Be finite and minimal (small, closed set)
+- Avoid hierarchy and authority leakage
+- Encode failure as first-class
+- Support partial and incomplete entries
+- Be readable by humans and parsable by tools
+
+The track system MUST NOT:
+
+- Imply truth, correctness, or endorsement
+- Encode ontology or metaphysical commitment
+- Act as a taxonomy or dependency tree
+- Replace judgment or reasoning
+
+---
+
+## 2. Track Syntax (Canonical)
+
+Each track is written as:
+
+```
+@TRACK_NAME: value[, value, ...]
+```
+
+Rules:
+
+- Track names are uppercase ASCII
+- Values are symbolic identifiers, not prose
+- Absence of a track is meaningful
+- Tracks may contradict across entries; contradictions are *diagnostic*
+
+---
+
+## 3. Core Track Set (v0.1)
+
+This set is intentionally small. New tracks are forbidden unless they cannot be expressed by composition of existing tracks.
+
+---
+
+### 3.1 @LEVEL
+
+Declares the *highest admissible structural regime* in which the entry may operate.
+
+Allowed values:
+
+- PROTO
+- GRAMMAR
+- DOMAIN
+- ECOLOGY
+
+Rules:
+
+- An entry may not be used above its declared level
+- Using an entry below its level is permitted but lossy
+
+---
+
+### 3.2 @ROLE
+
+Declares the kind of structural work the entry performs.
+
+Common values:
+
+- CONSTRAINT
+- RELATION
+- OPERATOR
+- DESCRIPTOR
+- RECORD
+- DIAGNOSTIC
+
+Rules:
+
+- ROLE is descriptive, not prescriptive
+- Multiple roles are allowed if tension is intentional
+
+---
+
+### 3.3 @CONSTRAINS
+
+Declares what this entry forbids or narrows.
+
+Values:
+
+- References to other entries
+
+Interpretation:
+
+- Directional
+- Non-symmetric
+- Absence implies permissive structure
+
+---
+
+### 3.4 @REQUIRES
+
+Declares prerequisites for admissible use.
+
+Values:
+
+- Other entries
+- Structural conditions (e.g., VISIBILITY, CONTEXT)
+
+Interpretation:
+
+- If requirements are unmet, use becomes undefined rather than false
+
+---
+
+### 3.5 @FAILS\_AS
+
+Declares the failure modes this entry tends toward when overloaded or misplaced.
+
+Values:
+
+- Named failure modes
+
+Interpretation:
+
+- Predictive, not accusatory
+- Central to diagnosis
+
+---
+
+### 3.6 @OPPOSES
+
+Declares structural incompatibility.
+
+Values:
+
+- Other entries
+
+Interpretation:
+
+- Mutual opposition is allowed but must be explicit
+- Opposition is not negation
+
+---
+
+### 3.7 @VISIBLE\_WHEN
+
+Declares conditions under which this entry becomes legible.
+
+Values:
+
+- PRESSURE
+- INSTABILITY
+- FAILURE
+- DESCENT
+
+Interpretation:
+
+- Absence implies background structure
+
+---
+
+## 4. Optional Derived Tracks (Use Sparingly)
+
+These tracks are allowed but discouraged.
+
+- @DERIVED\_FROM
+- @USED\_IN
+- @ALIASES
+
+Rule: If a derived track becomes essential, the core set is insufficient and must be revised.
+
+---
+
+## 5. Example Entry (Illustrative Only)
+
+```
+Non-Invention Principle
+@LEVEL: PROTO
+@ROLE: CONSTRAINT
+@CONSTRAINS: PositiveAssertion
+@FAILS_AS: PrematureClosure, OntologySmuggling
+@VISIBLE_WHEN: DESCENT
+```
+
+No prose explanation is required for admissibility.
+
+---
+
+## 6. Failure of the Track System (Expected and Allowed)
+
+The track system is expected to fail when:
+
+- Too many tracks are needed to express a concept
+- Tracks begin to encode explanation rather than constraint
+- Entries require prose to remain coherent
+
+Such failures are **signals**, not defects.
+
+---
+
+## 7. Relationship to the Atlas
+
+The Atlas is not complete without tracks.
+
+Tracks are how the Atlas:
+
+- Teaches without explaining
+- Reveals misuse without accusation
+- Preserves coherence under growth
+
+The Atlas must obey its own track constraints.
+
+---
+
+## Status
+
+Draft v0.1 Open to strain, revision, or abandonment.
+

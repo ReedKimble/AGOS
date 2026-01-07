@@ -1,0 +1,148 @@
+(cross-domain-translation-and-loss)=
+# Cross-Domain Translation & Loss
+
+This document addresses **cross-domain translation** as a structurally lossy operation. It formalizes why translation across domains cannot preserve full structure, why loss is unavoidable, and why failure to declare loss is one of the most common sources of boundary misattribution.
+
+Cross-domain translation is not synthesis. It is **re-articulation under incompatible constraint regimes**.
+
+---
+
+## 0. Orientation
+
+- Domains are defined by distinct constraint regimes.
+- Translation between domains necessarily violates at least one regime.
+- Loss is not a defect of translation; it is its defining property.
+
+This document exists to prevent treating translation-induced loss as insight.
+
+---
+
+## 1. What a Domain Is (Structurally)
+
+A **domain** is not a subject area. It is a stabilized grammar operating under:
+- survival constraints,
+- incentive structures,
+- and domain-specific admissibility rules.
+
+Domains optimize for internal coherence and usefulness, not for upstream fidelity.
+
+---
+
+## 2. Why Cross-Domain Translation Is Unavoidable
+
+Cross-domain translation arises when:
+- a concept exceeds the expressive capacity of a single domain,
+- coordination across domains is required,
+- or boundary conditions are encountered.
+
+Translation is therefore a **response to pressure**, not an optional activity.
+
+---
+
+## 3. The Structural Necessity of Loss
+
+Translation requires:
+- re-encoding concepts into a different grammar,
+- substituting roles and relations,
+- discarding distinctions that cannot be expressed.
+
+This produces **structural loss**.
+
+Loss may involve:
+- suppressed constraints,
+- altered role semantics,
+- or collapsed distinctions.
+
+---
+
+## 4. Declared vs Undeclared Translation Loss
+
+### Declared Loss
+
+- Incompatible distinctions are named
+- Scope of applicability is reduced
+- Translation is marked as approximate
+
+Declared loss preserves admissibility.
+
+### Undeclared Loss
+
+- Distinctions vanish silently
+- Translated concepts appear equivalent
+- Grammar-level mismatches are hidden
+
+Undeclared loss produces collapse.
+
+---
+
+## 5. Common Failure Patterns
+
+### False Equivalence
+
+- Treating translated terms as identical
+- Ignoring domain-specific constraints
+
+### Metaphorical Inflation
+
+- Using analogy as identity
+- Extending metaphors beyond admissible scope
+
+### Unification Illusion
+
+- Treating partial overlap as synthesis
+- Claiming deeper explanation where loss occurred
+
+---
+
+## 6. Translation Is Not Integration
+
+Integration implies:
+- preservation of structure,
+- compatibility of constraints,
+- reversible mapping.
+
+Cross-domain translation provides none of these guarantees.
+
+Treating translation as integration is a category error.
+
+---
+
+## 7. Translation and Collapse Dynamics
+
+- Undeclared translation loss accelerates collapse
+- Retrospective justification masks vanished alternatives
+- Authority often stabilizes post-collapse translations
+
+Cross-domain collapse is often misread as convergence.
+
+---
+
+## 8. Productive Use of Translation
+
+Translation can remain admissible when:
+- loss is explicitly declared,
+- translations are treated as provisional lenses,
+- and reverse translation is acknowledged as impossible.
+
+Under these conditions, translation supports coordination without false unification.
+
+---
+
+## 9. Structural Heuristic
+
+When encountering cross-domain work, ask:
+
+- What distinctions were lost?
+- Which constraints no longer apply?
+- Where was loss declared?
+
+If these cannot be answered, collapse has likely occurred.
+
+---
+
+## Status
+
+Field Guide Draft v0.1
+
+Cross-domain translation should always feel incomplete. That incompleteness is structural.
+

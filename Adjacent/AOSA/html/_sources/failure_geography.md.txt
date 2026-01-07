@@ -1,0 +1,203 @@
+(failure-geography)=
+# Failure Geography — A Field Guide
+
+This document maps **failure as terrain**, not error. Failure modes are treated as *regions, gradients, and attractors* that structure how grammars degrade under pressure.
+
+Failure is not a mistake to be corrected; it is a **signal of boundary contact, overload, or misplacement**.
+
+---
+
+## 0. How to Use This Field Guide
+
+- Read failures as *locations*, not accusations.
+- Multiple failure modes may coexist; overlap is diagnostic.
+- Escalation toward collapse is a trajectory, not an event.
+- No failure mode is unique to a domain; domains differ only in how they mask them.
+
+---
+
+## 1. Scope Inflation Region
+
+### Terrain Description
+
+A broad plateau where concepts appear to apply farther than they are admissible.
+
+### Typical Indicators
+
+- Increasing generality of language
+- Loss of explicit constraints
+- Phrases like “in general,” “at all levels,” “ultimately”
+
+### Structural Cause
+
+- Grammar exceeds its regime without declaring descent or loss
+
+### Common Misreading
+
+- Interpreted as unification or deep insight
+
+---
+
+## 2. Layer Collapse Basin
+
+### Terrain Description
+
+A steep basin where distinctions between structural levels disappear.
+
+### Typical Indicators
+
+- Grammar-level claims treated as ontological
+- Domain mechanisms used to justify grammar
+
+### Structural Cause
+
+- Failure to maintain level separation under pressure
+
+### Common Misreading
+
+- Treated as explanatory elegance or simplicity
+
+---
+
+## 3. Bookkeeping-to-Mechanism Attractor
+
+### Terrain Description
+
+A strong attractor where records, models, or symbols are mistaken for causal agents.
+
+### Typical Indicators
+
+- Data “drives” outcomes
+- Algorithms “decide” or “know”
+
+### Structural Cause
+
+- External bookkeeping persistence mistaken for structure
+
+### Common Misreading
+
+- Interpreted as technological or formal power
+
+---
+
+## 4. Approximation Reification Ridge
+
+### Terrain Description
+
+A narrowing ridge where approximations harden into assumed reality.
+
+### Typical Indicators
+
+- Suppression of error terms
+- Resistance to model revision
+
+### Structural Cause
+
+- Declared loss forgotten under repeated use
+
+### Common Misreading
+
+- Treated as convergence or proof
+
+---
+
+## 5. Narrative Gravity Well
+
+### Terrain Description
+
+A deep well where explanatory stories overpower structural constraint.
+
+### Typical Indicators
+
+- Anthropomorphic language
+- Teleological framing
+
+### Structural Cause
+
+- Human interpretive bias under uncertainty
+
+### Common Misreading
+
+- Treated as understanding or meaning
+
+---
+
+## 6. Premature Closure Cliff
+
+### Terrain Description
+
+A sharp cliff marking forced termination of inquiry.
+
+### Typical Indicators
+
+- Definitive language
+- Appeals to final authority
+
+### Structural Cause
+
+- Intolerance for ambiguity or instability
+
+### Common Misreading
+
+- Treated as rigor or decisiveness
+
+---
+
+## 7. Authority Capture Zone
+
+### Terrain Description
+
+A fortified region where structural guidance becomes enforcement.
+
+### Typical Indicators
+
+- Policing of interpretation
+- Credential-based dismissal
+
+### Structural Cause
+
+- Boundary between constraint and power erased
+
+### Common Misreading
+
+- Treated as quality control
+
+---
+
+## 8. Collapse Basin
+
+### Terrain Description
+
+A low basin representing undeclared loss of admissible alternatives.
+
+### Typical Indicators
+
+- Irreversible narrowing unnoticed by practitioners
+- Vanishing of prior distinctions
+
+### Structural Cause
+
+- Pressure exceeds stability without declaration
+
+### Common Misreading
+
+- Treated as convergence or inevitability
+
+---
+
+## 9. Typical Descent Paths
+
+- Scope Inflation → Layer Collapse → Bookkeeping Attractor
+- Approximation Reification → Narrative Gravity → Premature Closure
+- Authority Capture → Collapse Basin
+
+These paths are **predictive**, not prescriptive.
+
+---
+
+## Status
+
+Field Guide Draft v0.1
+
+Failure regions are expected to sharpen with use.
+

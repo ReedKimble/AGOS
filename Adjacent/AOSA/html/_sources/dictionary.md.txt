@@ -1,0 +1,607 @@
+(dictionary)=
+# Dictionary
+
+This document restores the original *dictionary function* inside the Atlas.
+
+Each term includes a **short stabilizing description**. These are *guardrails*, not full definitions.
+
+---
+
+## Level 0 — Protodomain / Pre-Categorical
+
+(Only negative, constraining, or invariance-encoding terms are admissible here.)
+
+
+(term-constraint)=
+
+### Constraint
+
+A structural forbiddance that narrows admissible moves without creating new entities.
+  - **Prohibition** — A constraint viewed from the perspective of an attempted move.
+  - **Illegality** — A constraint encountered during execution.
+
+
+
+(term-non-invention)=
+
+### Non-Invention
+
+The rule that structure may constrain but must not create.
+
+
+(term-admissibility)=
+
+### Admissibility
+
+Whether a move is allowed under current constraints.
+
+
+
+(term-invariance)=
+
+### Invariance
+
+What remains unchanged across admissible transformations.
+
+
+(term-coherence)=
+
+### Coherence
+
+Mutual compatibility of constraints without requiring closure.
+
+
+(term-non-closure)=
+
+### Non-Closure
+
+Refusal of finality or decisive assertion.
+
+
+
+(term-asymmetry)=
+
+### Asymmetry
+
+Structural non-equivalence that biases trajectories.
+  - **Irreversibility** — Asymmetry with respect to time or operation.
+  - **Loss** — Asymmetry experienced across levels.
+    - **Declared Loss** — Loss that is explicit and scoped.
+    - **Undeclared Loss** — Loss hidden or misattributed.
+
+
+
+(term-attraction)=
+
+### Attraction
+
+Directional bias in possibility space without agency.
+  - **Attractor** — A structural sink toward which trajectories converge.
+  - **Gradient** — Local structure of attraction shaping paths.
+  - **Curvature** — Bias of trajectories without force or mechanism.
+
+
+
+(term-differentiation)=
+
+### Differentiation
+
+The emergence of distinguishability.
+
+
+(term-visibility)=
+
+### Visibility
+
+What distinctions are legible under a given regime.
+
+
+(term-absence)=
+
+### Absence
+
+Structural non-presence without implication of lack.
+
+---
+
+
+## Level 1 — Grammar / Formal Articulation
+
+(Terms that stabilize roles, relations, and admissible moves without domain marriage.)
+
+
+(term-grammar)=
+
+### Grammar
+
+The system of admissible structural moves.
+
+
+(term-protodomain)=
+
+### Protodomain
+
+The pre-categorical structural regime.
+
+
+
+(term-structural-role)=
+
+### Structural Role
+
+Abstract function an element serves.
+  - **Object (role)** — That which may be referred to.
+  - **Relation (role)** — That which differentiates objects.
+  - **Constraint (role)** — That which forbids moves.
+  - **Context / Frame** — That which bounds interpretation.
+
+
+
+(term-lens)=
+
+### Lens
+
+A visibility selector that changes what is seen without changing what is real.
+
+
+
+(term-operator)=
+
+### Operator
+
+An admissible transformation.
+  - **Unary Operation** — Transformation with one input.
+  - **Binary Operation** — Transformation with two inputs.
+  - **Mapping** — A correspondence between structures.
+  - **Projection** — A lossy mapping with explicit discard.
+
+
+
+(term-representation)=
+
+### Representation
+
+An encoding into a chosen descriptive form.
+
+
+
+(term-binding)=
+
+### Binding
+
+The act of associating elements under grammar.
+
+
+(term-edge)=
+
+### Edge
+
+A represented relation between elements.
+
+
+
+(term-bookkeeping)=
+
+### Bookkeeping
+
+Structural memory without authority.
+  - **Track** — Constraint-oriented bookkeeping.
+  - **Tag** — Semantic-oriented bookkeeping.
+  - **Record** — A bookkeeping artifact.
+  - **Internal State** — Bookkeeping local to a structure.
+  - **External Record** — Bookkeeping used for coordination.
+
+
+
+(term-declaration)=
+
+### Declaration
+
+Explicit statement of structure or constraint.
+
+---
+
+
+## Level 2 — Domain-Married Grammar
+
+(Terms that arise when grammar descends into a survival context.)
+
+
+(term-domain)=
+
+### Domain
+
+A context with external stakes.
+
+
+(term-domain-marriage)=
+
+### Domain Marriage
+
+Irreversible binding of grammar to a domain.
+
+
+
+(term-incentive)=
+
+### Incentive
+
+Domain-specific attractor.
+
+
+(term-alignment)=
+
+### Alignment
+
+Compatibility with domain pressures.
+
+
+(term-selection-pressure)=
+
+### Selection Pressure
+
+Differential survival bias.
+
+
+
+(term-evaluation)=
+
+### Evaluation
+
+Assignment of value.
+
+
+(term-measurement)=
+
+### Measurement
+
+Production of data via interaction.
+
+
+(term-optimization)=
+
+### Optimization
+
+Selection under criteria.
+
+
+
+(term-approximation)=
+
+### Approximation
+
+Controlled deviation from exactness.
+
+
+(term-model)=
+
+### Model
+
+A domain-married representation.
+
+
+
+(term-descriptor)=
+
+### Descriptor
+
+A naming handle.
+
+
+(term-primitive-assumed)=
+
+### Primitive (assumed)
+
+A taken-for-granted base element.
+
+
+(term-mechanism-claimed)=
+
+### Mechanism (claimed)
+
+An asserted causal structure.
+
+
+
+(term-authority)=
+
+### Authority
+
+Power to decide or enforce.
+
+
+(term-policy)=
+
+### Policy
+
+Formalized authority constraint.
+
+
+
+(term-tradeoff)=
+
+### Tradeoff
+
+Managed loss between alternatives.
+
+
+(term-loss-of-freedom)=
+
+### Loss of Freedom
+
+Reduction of admissible moves.
+
+---
+
+
+## Level 3 — Grammar Ecology / Immunity Layer
+
+(Terms governing propagation, misuse, and failure across contexts.)
+
+
+(term-failure-mode)=
+
+### Failure Mode
+
+A predictable pattern of structural collapse.
+
+
+(term-fallacy)=
+
+### Fallacy
+
+A recurrent structural misstep.
+
+
+
+(term-scope-inflation)=
+
+### Scope Inflation
+
+Unjustified expansion of applicability.
+
+
+(term-layer-collapse)=
+
+### Layer Collapse
+
+Confusion of structural levels.
+
+
+(term-bookkeeping-to-mechanism-promotion)=
+
+### Bookkeeping-to-Mechanism Promotion
+
+Treating records as causes.
+
+
+(term-approximation-reification)=
+
+### Approximation Reification
+
+Treating estimates as reality.
+
+
+(term-premature-closure)=
+
+### Premature Closure
+
+Forcing finality.
+
+
+(term-narrative-gravity)=
+
+### Narrative Gravity
+
+Drift toward story over structure.
+
+
+(term-representational-literalism)=
+
+### Representational Literalism
+
+Confusing representation with reality.
+
+
+(term-descriptorprimitive-confusion)=
+
+### Descriptor–Primitive Confusion
+
+Treating names as fundamentals.
+
+
+
+(term-authority-capture)=
+
+### Authority Capture
+
+Structural takeover by power.
+
+
+
+(term-immunity)=
+
+### Immunity
+
+Resistance to misuse propagation.
+
+
+(term-containment)=
+
+### Containment
+
+Limiting failure spread.
+
+
+
+(term-boundary)=
+
+### Boundary
+
+Ecological separation preventing leakage.
+
+
+
+(term-drift)=
+
+### Drift
+
+Gradual misalignment.
+
+
+(term-leakage)=
+
+### Leakage
+
+Uncontrolled propagation.
+
+
+(term-misattribution)=
+
+### Misattribution
+
+Assigning effects to wrong causes.
+
+---
+
+
+## Cross-Level / Transitional Terms
+
+(Terms that explicitly reference movement, stress, or visibility across levels.)
+
+
+(term-descent)=
+
+### Descent
+
+Movement into greater constraint.
+
+
+(term-emergence)=
+
+### Emergence
+
+Appearance of new structure from constraint.
+
+
+
+(term-state-change)=
+
+### State Change
+
+Transition between configurations.
+  - **Decoherence** — Loss of coordination without elimination.
+  - **Projection Loss** — Declared loss due to projection.
+
+
+
+(term-coupling)=
+
+### Coupling
+
+Degree of dependency between components.
+  - **Tight Coupling** — Strong dependency.
+  - **Loose Coupling** — Weak dependency.
+  - **Decoupling** — Reduction of dependency.
+
+
+
+(term-stability)=
+
+### Stability
+
+The capacity of a system to absorb applied pressure while maintaining coherence faster than decoherence accumulates.
+  - **Instability** — A condition in which applied pressure exceeds a system’s tolerance, causing decoherence to accelerate faster than existing stability can maintain coherence.
+
+
+
+(term-branching)=
+
+### Branching
+
+Increase in admissible alternatives (a widening of possibility space).
+
+
+(term-collapse)=
+
+### Collapse
+
+Undeclared loss of admissible alternatives.
+
+
+
+(term-pressure)=
+
+### Pressure
+
+A sustained directional constraint applied to a system that biases trajectories and loads existing stability.
+
+
+
+(term-transition)=
+
+### Transition
+
+Change across regimes.
+
+
+(term-threshold)=
+
+### Threshold
+
+Boundary where regime changes.
+
+
+(term-visibility-condition)=
+
+### Visibility Condition
+
+Requirement for distinctions to appear.
+
+
+### Branching (alias)
+
+See {ref}`Branching <term-branching>`.
+
+Original local phrasing: Increase in admissible alternatives (a widening of possibility space).
+
+
+
+
+### Pressure (alias)
+
+See {ref}`Pressure <term-pressure>`.
+
+Original local phrasing: Persistent directional constraint.
+
+
+
+
+### Transition (alias)
+
+See {ref}`Transition <term-transition>`.
+
+Original local phrasing: Change across regimes.
+
+
+### Threshold (alias)
+
+See {ref}`Threshold <term-threshold>`.
+
+Original local phrasing: Boundary where regime changes.
+
+
+### Visibility Condition (alias)
+
+See {ref}`Visibility Condition <term-visibility-condition>`.
+
+Original local phrasing: Requirement for distinctions to appear.
+
+
+---
+
+
+## Status
+
+Annotated Draft v0.2
+Descriptions are stabilizers, not explanations.

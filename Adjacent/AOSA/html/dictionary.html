@@ -1,0 +1,780 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Internal Track System" href="track_system.html"><link rel="prev" title="Atlas Index" href="atlas_index.html">
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
+        <title>Dictionary - Atlas of Structural Admissibility [AOSA] 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Atlas of Structural Admissibility [AOSA] 0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <span class="sidebar-brand-text">Atlas of Structural Admissibility [AOSA] 0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Core</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="atlas_index.html">Atlas Index</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="track_system.html">Internal Track System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structural_boundary_conditions.html">Structural Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="failure_geography.html">Failure Geography — A Field Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inquiry_and_evaluation.html">Inquiry and Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collapse_vs_branching_dynamics.html">Collapse vs Branching Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lenses_and_visibility_control.html">Lenses &amp; Visibility Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cross_domain_translation_and_loss.html">Cross-Domain Translation &amp; Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingestion_and_integration.html">Ingestion and Integration</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/dictionary.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="dictionary">
+<span id="id1"></span><h1>Dictionary<a class="headerlink" href="#dictionary" title="Link to this heading">¶</a></h1>
+<p>This document restores the original <em>dictionary function</em> inside the Atlas.</p>
+<p>Each term includes a <strong>short stabilizing description</strong>. These are <em>guardrails</em>, not full definitions.</p>
+<hr class="docutils" />
+<section id="level-0-protodomain-pre-categorical">
+<h2>Level 0 — Protodomain / Pre-Categorical<a class="headerlink" href="#level-0-protodomain-pre-categorical" title="Link to this heading">¶</a></h2>
+<p>(Only negative, constraining, or invariance-encoding terms are admissible here.)</p>
+<section id="constraint">
+<span id="term-constraint"></span><h3>Constraint<a class="headerlink" href="#constraint" title="Link to this heading">¶</a></h3>
+<p>A structural forbiddance that narrows admissible moves without creating new entities.</p>
+<ul class="simple">
+<li><p><strong>Prohibition</strong> — A constraint viewed from the perspective of an attempted move.</p></li>
+<li><p><strong>Illegality</strong> — A constraint encountered during execution.</p></li>
+</ul>
+</section>
+<section id="non-invention">
+<span id="term-non-invention"></span><h3>Non-Invention<a class="headerlink" href="#non-invention" title="Link to this heading">¶</a></h3>
+<p>The rule that structure may constrain but must not create.</p>
+</section>
+<section id="admissibility">
+<span id="term-admissibility"></span><h3>Admissibility<a class="headerlink" href="#admissibility" title="Link to this heading">¶</a></h3>
+<p>Whether a move is allowed under current constraints.</p>
+</section>
+<section id="invariance">
+<span id="term-invariance"></span><h3>Invariance<a class="headerlink" href="#invariance" title="Link to this heading">¶</a></h3>
+<p>What remains unchanged across admissible transformations.</p>
+</section>
+<section id="coherence">
+<span id="term-coherence"></span><h3>Coherence<a class="headerlink" href="#coherence" title="Link to this heading">¶</a></h3>
+<p>Mutual compatibility of constraints without requiring closure.</p>
+</section>
+<section id="non-closure">
+<span id="term-non-closure"></span><h3>Non-Closure<a class="headerlink" href="#non-closure" title="Link to this heading">¶</a></h3>
+<p>Refusal of finality or decisive assertion.</p>
+</section>
+<section id="asymmetry">
+<span id="term-asymmetry"></span><h3>Asymmetry<a class="headerlink" href="#asymmetry" title="Link to this heading">¶</a></h3>
+<p>Structural non-equivalence that biases trajectories.</p>
+<ul class="simple">
+<li><p><strong>Irreversibility</strong> — Asymmetry with respect to time or operation.</p></li>
+<li><p><strong>Loss</strong> — Asymmetry experienced across levels.</p>
+<ul>
+<li><p><strong>Declared Loss</strong> — Loss that is explicit and scoped.</p></li>
+<li><p><strong>Undeclared Loss</strong> — Loss hidden or misattributed.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="attraction">
+<span id="term-attraction"></span><h3>Attraction<a class="headerlink" href="#attraction" title="Link to this heading">¶</a></h3>
+<p>Directional bias in possibility space without agency.</p>
+<ul class="simple">
+<li><p><strong>Attractor</strong> — A structural sink toward which trajectories converge.</p></li>
+<li><p><strong>Gradient</strong> — Local structure of attraction shaping paths.</p></li>
+<li><p><strong>Curvature</strong> — Bias of trajectories without force or mechanism.</p></li>
+</ul>
+</section>
+<section id="differentiation">
+<span id="term-differentiation"></span><h3>Differentiation<a class="headerlink" href="#differentiation" title="Link to this heading">¶</a></h3>
+<p>The emergence of distinguishability.</p>
+</section>
+<section id="visibility">
+<span id="term-visibility"></span><h3>Visibility<a class="headerlink" href="#visibility" title="Link to this heading">¶</a></h3>
+<p>What distinctions are legible under a given regime.</p>
+</section>
+<section id="absence">
+<span id="term-absence"></span><h3>Absence<a class="headerlink" href="#absence" title="Link to this heading">¶</a></h3>
+<p>Structural non-presence without implication of lack.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="level-1-grammar-formal-articulation">
+<h2>Level 1 — Grammar / Formal Articulation<a class="headerlink" href="#level-1-grammar-formal-articulation" title="Link to this heading">¶</a></h2>
+<p>(Terms that stabilize roles, relations, and admissible moves without domain marriage.)</p>
+<section id="grammar">
+<span id="term-grammar"></span><h3>Grammar<a class="headerlink" href="#grammar" title="Link to this heading">¶</a></h3>
+<p>The system of admissible structural moves.</p>
+</section>
+<section id="protodomain">
+<span id="term-protodomain"></span><h3>Protodomain<a class="headerlink" href="#protodomain" title="Link to this heading">¶</a></h3>
+<p>The pre-categorical structural regime.</p>
+</section>
+<section id="structural-role">
+<span id="term-structural-role"></span><h3>Structural Role<a class="headerlink" href="#structural-role" title="Link to this heading">¶</a></h3>
+<p>Abstract function an element serves.</p>
+<ul class="simple">
+<li><p><strong>Object (role)</strong> — That which may be referred to.</p></li>
+<li><p><strong>Relation (role)</strong> — That which differentiates objects.</p></li>
+<li><p><strong>Constraint (role)</strong> — That which forbids moves.</p></li>
+<li><p><strong>Context / Frame</strong> — That which bounds interpretation.</p></li>
+</ul>
+</section>
+<section id="lens">
+<span id="term-lens"></span><h3>Lens<a class="headerlink" href="#lens" title="Link to this heading">¶</a></h3>
+<p>A visibility selector that changes what is seen without changing what is real.</p>
+</section>
+<section id="operator">
+<span id="term-operator"></span><h3>Operator<a class="headerlink" href="#operator" title="Link to this heading">¶</a></h3>
+<p>An admissible transformation.</p>
+<ul class="simple">
+<li><p><strong>Unary Operation</strong> — Transformation with one input.</p></li>
+<li><p><strong>Binary Operation</strong> — Transformation with two inputs.</p></li>
+<li><p><strong>Mapping</strong> — A correspondence between structures.</p></li>
+<li><p><strong>Projection</strong> — A lossy mapping with explicit discard.</p></li>
+</ul>
+</section>
+<section id="representation">
+<span id="term-representation"></span><h3>Representation<a class="headerlink" href="#representation" title="Link to this heading">¶</a></h3>
+<p>An encoding into a chosen descriptive form.</p>
+</section>
+<section id="binding">
+<span id="term-binding"></span><h3>Binding<a class="headerlink" href="#binding" title="Link to this heading">¶</a></h3>
+<p>The act of associating elements under grammar.</p>
+</section>
+<section id="edge">
+<span id="term-edge"></span><h3>Edge<a class="headerlink" href="#edge" title="Link to this heading">¶</a></h3>
+<p>A represented relation between elements.</p>
+</section>
+<section id="bookkeeping">
+<span id="term-bookkeeping"></span><h3>Bookkeeping<a class="headerlink" href="#bookkeeping" title="Link to this heading">¶</a></h3>
+<p>Structural memory without authority.</p>
+<ul class="simple">
+<li><p><strong>Track</strong> — Constraint-oriented bookkeeping.</p></li>
+<li><p><strong>Tag</strong> — Semantic-oriented bookkeeping.</p></li>
+<li><p><strong>Record</strong> — A bookkeeping artifact.</p></li>
+<li><p><strong>Internal State</strong> — Bookkeeping local to a structure.</p></li>
+<li><p><strong>External Record</strong> — Bookkeeping used for coordination.</p></li>
+</ul>
+</section>
+<section id="declaration">
+<span id="term-declaration"></span><h3>Declaration<a class="headerlink" href="#declaration" title="Link to this heading">¶</a></h3>
+<p>Explicit statement of structure or constraint.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="level-2-domain-married-grammar">
+<h2>Level 2 — Domain-Married Grammar<a class="headerlink" href="#level-2-domain-married-grammar" title="Link to this heading">¶</a></h2>
+<p>(Terms that arise when grammar descends into a survival context.)</p>
+<section id="domain">
+<span id="term-domain"></span><h3>Domain<a class="headerlink" href="#domain" title="Link to this heading">¶</a></h3>
+<p>A context with external stakes.</p>
+</section>
+<section id="domain-marriage">
+<span id="term-domain-marriage"></span><h3>Domain Marriage<a class="headerlink" href="#domain-marriage" title="Link to this heading">¶</a></h3>
+<p>Irreversible binding of grammar to a domain.</p>
+</section>
+<section id="incentive">
+<span id="term-incentive"></span><h3>Incentive<a class="headerlink" href="#incentive" title="Link to this heading">¶</a></h3>
+<p>Domain-specific attractor.</p>
+</section>
+<section id="alignment">
+<span id="term-alignment"></span><h3>Alignment<a class="headerlink" href="#alignment" title="Link to this heading">¶</a></h3>
+<p>Compatibility with domain pressures.</p>
+</section>
+<section id="selection-pressure">
+<span id="term-selection-pressure"></span><h3>Selection Pressure<a class="headerlink" href="#selection-pressure" title="Link to this heading">¶</a></h3>
+<p>Differential survival bias.</p>
+</section>
+<section id="evaluation">
+<span id="term-evaluation"></span><h3>Evaluation<a class="headerlink" href="#evaluation" title="Link to this heading">¶</a></h3>
+<p>Assignment of value.</p>
+</section>
+<section id="measurement">
+<span id="term-measurement"></span><h3>Measurement<a class="headerlink" href="#measurement" title="Link to this heading">¶</a></h3>
+<p>Production of data via interaction.</p>
+</section>
+<section id="optimization">
+<span id="term-optimization"></span><h3>Optimization<a class="headerlink" href="#optimization" title="Link to this heading">¶</a></h3>
+<p>Selection under criteria.</p>
+</section>
+<section id="approximation">
+<span id="term-approximation"></span><h3>Approximation<a class="headerlink" href="#approximation" title="Link to this heading">¶</a></h3>
+<p>Controlled deviation from exactness.</p>
+</section>
+<section id="model">
+<span id="term-model"></span><h3>Model<a class="headerlink" href="#model" title="Link to this heading">¶</a></h3>
+<p>A domain-married representation.</p>
+</section>
+<section id="descriptor">
+<span id="term-descriptor"></span><h3>Descriptor<a class="headerlink" href="#descriptor" title="Link to this heading">¶</a></h3>
+<p>A naming handle.</p>
+</section>
+<section id="primitive-assumed">
+<span id="term-primitive-assumed"></span><h3>Primitive (assumed)<a class="headerlink" href="#primitive-assumed" title="Link to this heading">¶</a></h3>
+<p>A taken-for-granted base element.</p>
+</section>
+<section id="mechanism-claimed">
+<span id="term-mechanism-claimed"></span><h3>Mechanism (claimed)<a class="headerlink" href="#mechanism-claimed" title="Link to this heading">¶</a></h3>
+<p>An asserted causal structure.</p>
+</section>
+<section id="authority">
+<span id="term-authority"></span><h3>Authority<a class="headerlink" href="#authority" title="Link to this heading">¶</a></h3>
+<p>Power to decide or enforce.</p>
+</section>
+<section id="policy">
+<span id="term-policy"></span><h3>Policy<a class="headerlink" href="#policy" title="Link to this heading">¶</a></h3>
+<p>Formalized authority constraint.</p>
+</section>
+<section id="tradeoff">
+<span id="term-tradeoff"></span><h3>Tradeoff<a class="headerlink" href="#tradeoff" title="Link to this heading">¶</a></h3>
+<p>Managed loss between alternatives.</p>
+</section>
+<section id="loss-of-freedom">
+<span id="term-loss-of-freedom"></span><h3>Loss of Freedom<a class="headerlink" href="#loss-of-freedom" title="Link to this heading">¶</a></h3>
+<p>Reduction of admissible moves.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="level-3-grammar-ecology-immunity-layer">
+<h2>Level 3 — Grammar Ecology / Immunity Layer<a class="headerlink" href="#level-3-grammar-ecology-immunity-layer" title="Link to this heading">¶</a></h2>
+<p>(Terms governing propagation, misuse, and failure across contexts.)</p>
+<section id="failure-mode">
+<span id="term-failure-mode"></span><h3>Failure Mode<a class="headerlink" href="#failure-mode" title="Link to this heading">¶</a></h3>
+<p>A predictable pattern of structural collapse.</p>
+</section>
+<section id="fallacy">
+<span id="term-fallacy"></span><h3>Fallacy<a class="headerlink" href="#fallacy" title="Link to this heading">¶</a></h3>
+<p>A recurrent structural misstep.</p>
+</section>
+<section id="scope-inflation">
+<span id="term-scope-inflation"></span><h3>Scope Inflation<a class="headerlink" href="#scope-inflation" title="Link to this heading">¶</a></h3>
+<p>Unjustified expansion of applicability.</p>
+</section>
+<section id="layer-collapse">
+<span id="term-layer-collapse"></span><h3>Layer Collapse<a class="headerlink" href="#layer-collapse" title="Link to this heading">¶</a></h3>
+<p>Confusion of structural levels.</p>
+</section>
+<section id="bookkeeping-to-mechanism-promotion">
+<span id="term-bookkeeping-to-mechanism-promotion"></span><h3>Bookkeeping-to-Mechanism Promotion<a class="headerlink" href="#bookkeeping-to-mechanism-promotion" title="Link to this heading">¶</a></h3>
+<p>Treating records as causes.</p>
+</section>
+<section id="approximation-reification">
+<span id="term-approximation-reification"></span><h3>Approximation Reification<a class="headerlink" href="#approximation-reification" title="Link to this heading">¶</a></h3>
+<p>Treating estimates as reality.</p>
+</section>
+<section id="premature-closure">
+<span id="term-premature-closure"></span><h3>Premature Closure<a class="headerlink" href="#premature-closure" title="Link to this heading">¶</a></h3>
+<p>Forcing finality.</p>
+</section>
+<section id="narrative-gravity">
+<span id="term-narrative-gravity"></span><h3>Narrative Gravity<a class="headerlink" href="#narrative-gravity" title="Link to this heading">¶</a></h3>
+<p>Drift toward story over structure.</p>
+</section>
+<section id="representational-literalism">
+<span id="term-representational-literalism"></span><h3>Representational Literalism<a class="headerlink" href="#representational-literalism" title="Link to this heading">¶</a></h3>
+<p>Confusing representation with reality.</p>
+</section>
+<section id="descriptorprimitive-confusion">
+<span id="term-descriptorprimitive-confusion"></span><h3>Descriptor–Primitive Confusion<a class="headerlink" href="#descriptorprimitive-confusion" title="Link to this heading">¶</a></h3>
+<p>Treating names as fundamentals.</p>
+</section>
+<section id="authority-capture">
+<span id="term-authority-capture"></span><h3>Authority Capture<a class="headerlink" href="#authority-capture" title="Link to this heading">¶</a></h3>
+<p>Structural takeover by power.</p>
+</section>
+<section id="immunity">
+<span id="term-immunity"></span><h3>Immunity<a class="headerlink" href="#immunity" title="Link to this heading">¶</a></h3>
+<p>Resistance to misuse propagation.</p>
+</section>
+<section id="containment">
+<span id="term-containment"></span><h3>Containment<a class="headerlink" href="#containment" title="Link to this heading">¶</a></h3>
+<p>Limiting failure spread.</p>
+</section>
+<section id="boundary">
+<span id="term-boundary"></span><h3>Boundary<a class="headerlink" href="#boundary" title="Link to this heading">¶</a></h3>
+<p>Ecological separation preventing leakage.</p>
+</section>
+<section id="drift">
+<span id="term-drift"></span><h3>Drift<a class="headerlink" href="#drift" title="Link to this heading">¶</a></h3>
+<p>Gradual misalignment.</p>
+</section>
+<section id="leakage">
+<span id="term-leakage"></span><h3>Leakage<a class="headerlink" href="#leakage" title="Link to this heading">¶</a></h3>
+<p>Uncontrolled propagation.</p>
+</section>
+<section id="misattribution">
+<span id="term-misattribution"></span><h3>Misattribution<a class="headerlink" href="#misattribution" title="Link to this heading">¶</a></h3>
+<p>Assigning effects to wrong causes.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="cross-level-transitional-terms">
+<h2>Cross-Level / Transitional Terms<a class="headerlink" href="#cross-level-transitional-terms" title="Link to this heading">¶</a></h2>
+<p>(Terms that explicitly reference movement, stress, or visibility across levels.)</p>
+<section id="descent">
+<span id="term-descent"></span><h3>Descent<a class="headerlink" href="#descent" title="Link to this heading">¶</a></h3>
+<p>Movement into greater constraint.</p>
+</section>
+<section id="emergence">
+<span id="term-emergence"></span><h3>Emergence<a class="headerlink" href="#emergence" title="Link to this heading">¶</a></h3>
+<p>Appearance of new structure from constraint.</p>
+</section>
+<section id="state-change">
+<span id="term-state-change"></span><h3>State Change<a class="headerlink" href="#state-change" title="Link to this heading">¶</a></h3>
+<p>Transition between configurations.</p>
+<ul class="simple">
+<li><p><strong>Decoherence</strong> — Loss of coordination without elimination.</p></li>
+<li><p><strong>Projection Loss</strong> — Declared loss due to projection.</p></li>
+</ul>
+</section>
+<section id="coupling">
+<span id="term-coupling"></span><h3>Coupling<a class="headerlink" href="#coupling" title="Link to this heading">¶</a></h3>
+<p>Degree of dependency between components.</p>
+<ul class="simple">
+<li><p><strong>Tight Coupling</strong> — Strong dependency.</p></li>
+<li><p><strong>Loose Coupling</strong> — Weak dependency.</p></li>
+<li><p><strong>Decoupling</strong> — Reduction of dependency.</p></li>
+</ul>
+</section>
+<section id="stability">
+<span id="term-stability"></span><h3>Stability<a class="headerlink" href="#stability" title="Link to this heading">¶</a></h3>
+<p>The capacity of a system to absorb applied pressure while maintaining coherence faster than decoherence accumulates.</p>
+<ul class="simple">
+<li><p><strong>Instability</strong> — A condition in which applied pressure exceeds a system’s tolerance, causing decoherence to accelerate faster than existing stability can maintain coherence.</p></li>
+</ul>
+</section>
+<section id="branching">
+<span id="term-branching"></span><h3>Branching<a class="headerlink" href="#branching" title="Link to this heading">¶</a></h3>
+<p>Increase in admissible alternatives (a widening of possibility space).</p>
+</section>
+<section id="collapse">
+<span id="term-collapse"></span><h3>Collapse<a class="headerlink" href="#collapse" title="Link to this heading">¶</a></h3>
+<p>Undeclared loss of admissible alternatives.</p>
+</section>
+<section id="pressure">
+<span id="term-pressure"></span><h3>Pressure<a class="headerlink" href="#pressure" title="Link to this heading">¶</a></h3>
+<p>A sustained directional constraint applied to a system that biases trajectories and loads existing stability.</p>
+</section>
+<section id="transition">
+<span id="term-transition"></span><h3>Transition<a class="headerlink" href="#transition" title="Link to this heading">¶</a></h3>
+<p>Change across regimes.</p>
+</section>
+<section id="threshold">
+<span id="term-threshold"></span><h3>Threshold<a class="headerlink" href="#threshold" title="Link to this heading">¶</a></h3>
+<p>Boundary where regime changes.</p>
+</section>
+<section id="visibility-condition">
+<span id="term-visibility-condition"></span><h3>Visibility Condition<a class="headerlink" href="#visibility-condition" title="Link to this heading">¶</a></h3>
+<p>Requirement for distinctions to appear.</p>
+</section>
+<section id="branching-alias">
+<h3>Branching (alias)<a class="headerlink" href="#branching-alias" title="Link to this heading">¶</a></h3>
+<p>See <a class="reference internal" href="#term-branching"><span class="std std-ref">Branching</span></a>.</p>
+<p>Original local phrasing: Increase in admissible alternatives (a widening of possibility space).</p>
+</section>
+<section id="pressure-alias">
+<h3>Pressure (alias)<a class="headerlink" href="#pressure-alias" title="Link to this heading">¶</a></h3>
+<p>See <a class="reference internal" href="#term-pressure"><span class="std std-ref">Pressure</span></a>.</p>
+<p>Original local phrasing: Persistent directional constraint.</p>
+</section>
+<section id="transition-alias">
+<h3>Transition (alias)<a class="headerlink" href="#transition-alias" title="Link to this heading">¶</a></h3>
+<p>See <a class="reference internal" href="#term-transition"><span class="std std-ref">Transition</span></a>.</p>
+<p>Original local phrasing: Change across regimes.</p>
+</section>
+<section id="threshold-alias">
+<h3>Threshold (alias)<a class="headerlink" href="#threshold-alias" title="Link to this heading">¶</a></h3>
+<p>See <a class="reference internal" href="#term-threshold"><span class="std std-ref">Threshold</span></a>.</p>
+<p>Original local phrasing: Boundary where regime changes.</p>
+</section>
+<section id="visibility-condition-alias">
+<h3>Visibility Condition (alias)<a class="headerlink" href="#visibility-condition-alias" title="Link to this heading">¶</a></h3>
+<p>See <a class="reference internal" href="#term-visibility-condition"><span class="std std-ref">Visibility Condition</span></a>.</p>
+<p>Original local phrasing: Requirement for distinctions to appear.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="status">
+<h2>Status<a class="headerlink" href="#status" title="Link to this heading">¶</a></h2>
+<p>Annotated Draft v0.2
+Descriptions are stabilizers, not explanations.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="track_system.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Internal Track System</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="atlas_index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Atlas Index</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Reed Kimble (Structural Tooling Assistance by ChatGPT)
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Dictionary</a><ul>
+<li><a class="reference internal" href="#level-0-protodomain-pre-categorical">Level 0 — Protodomain / Pre-Categorical</a><ul>
+<li><a class="reference internal" href="#constraint">Constraint</a></li>
+<li><a class="reference internal" href="#non-invention">Non-Invention</a></li>
+<li><a class="reference internal" href="#admissibility">Admissibility</a></li>
+<li><a class="reference internal" href="#invariance">Invariance</a></li>
+<li><a class="reference internal" href="#coherence">Coherence</a></li>
+<li><a class="reference internal" href="#non-closure">Non-Closure</a></li>
+<li><a class="reference internal" href="#asymmetry">Asymmetry</a></li>
+<li><a class="reference internal" href="#attraction">Attraction</a></li>
+<li><a class="reference internal" href="#differentiation">Differentiation</a></li>
+<li><a class="reference internal" href="#visibility">Visibility</a></li>
+<li><a class="reference internal" href="#absence">Absence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#level-1-grammar-formal-articulation">Level 1 — Grammar / Formal Articulation</a><ul>
+<li><a class="reference internal" href="#grammar">Grammar</a></li>
+<li><a class="reference internal" href="#protodomain">Protodomain</a></li>
+<li><a class="reference internal" href="#structural-role">Structural Role</a></li>
+<li><a class="reference internal" href="#lens">Lens</a></li>
+<li><a class="reference internal" href="#operator">Operator</a></li>
+<li><a class="reference internal" href="#representation">Representation</a></li>
+<li><a class="reference internal" href="#binding">Binding</a></li>
+<li><a class="reference internal" href="#edge">Edge</a></li>
+<li><a class="reference internal" href="#bookkeeping">Bookkeeping</a></li>
+<li><a class="reference internal" href="#declaration">Declaration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#level-2-domain-married-grammar">Level 2 — Domain-Married Grammar</a><ul>
+<li><a class="reference internal" href="#domain">Domain</a></li>
+<li><a class="reference internal" href="#domain-marriage">Domain Marriage</a></li>
+<li><a class="reference internal" href="#incentive">Incentive</a></li>
+<li><a class="reference internal" href="#alignment">Alignment</a></li>
+<li><a class="reference internal" href="#selection-pressure">Selection Pressure</a></li>
+<li><a class="reference internal" href="#evaluation">Evaluation</a></li>
+<li><a class="reference internal" href="#measurement">Measurement</a></li>
+<li><a class="reference internal" href="#optimization">Optimization</a></li>
+<li><a class="reference internal" href="#approximation">Approximation</a></li>
+<li><a class="reference internal" href="#model">Model</a></li>
+<li><a class="reference internal" href="#descriptor">Descriptor</a></li>
+<li><a class="reference internal" href="#primitive-assumed">Primitive (assumed)</a></li>
+<li><a class="reference internal" href="#mechanism-claimed">Mechanism (claimed)</a></li>
+<li><a class="reference internal" href="#authority">Authority</a></li>
+<li><a class="reference internal" href="#policy">Policy</a></li>
+<li><a class="reference internal" href="#tradeoff">Tradeoff</a></li>
+<li><a class="reference internal" href="#loss-of-freedom">Loss of Freedom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#level-3-grammar-ecology-immunity-layer">Level 3 — Grammar Ecology / Immunity Layer</a><ul>
+<li><a class="reference internal" href="#failure-mode">Failure Mode</a></li>
+<li><a class="reference internal" href="#fallacy">Fallacy</a></li>
+<li><a class="reference internal" href="#scope-inflation">Scope Inflation</a></li>
+<li><a class="reference internal" href="#layer-collapse">Layer Collapse</a></li>
+<li><a class="reference internal" href="#bookkeeping-to-mechanism-promotion">Bookkeeping-to-Mechanism Promotion</a></li>
+<li><a class="reference internal" href="#approximation-reification">Approximation Reification</a></li>
+<li><a class="reference internal" href="#premature-closure">Premature Closure</a></li>
+<li><a class="reference internal" href="#narrative-gravity">Narrative Gravity</a></li>
+<li><a class="reference internal" href="#representational-literalism">Representational Literalism</a></li>
+<li><a class="reference internal" href="#descriptorprimitive-confusion">Descriptor–Primitive Confusion</a></li>
+<li><a class="reference internal" href="#authority-capture">Authority Capture</a></li>
+<li><a class="reference internal" href="#immunity">Immunity</a></li>
+<li><a class="reference internal" href="#containment">Containment</a></li>
+<li><a class="reference internal" href="#boundary">Boundary</a></li>
+<li><a class="reference internal" href="#drift">Drift</a></li>
+<li><a class="reference internal" href="#leakage">Leakage</a></li>
+<li><a class="reference internal" href="#misattribution">Misattribution</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#cross-level-transitional-terms">Cross-Level / Transitional Terms</a><ul>
+<li><a class="reference internal" href="#descent">Descent</a></li>
+<li><a class="reference internal" href="#emergence">Emergence</a></li>
+<li><a class="reference internal" href="#state-change">State Change</a></li>
+<li><a class="reference internal" href="#coupling">Coupling</a></li>
+<li><a class="reference internal" href="#stability">Stability</a></li>
+<li><a class="reference internal" href="#branching">Branching</a></li>
+<li><a class="reference internal" href="#collapse">Collapse</a></li>
+<li><a class="reference internal" href="#pressure">Pressure</a></li>
+<li><a class="reference internal" href="#transition">Transition</a></li>
+<li><a class="reference internal" href="#threshold">Threshold</a></li>
+<li><a class="reference internal" href="#visibility-condition">Visibility Condition</a></li>
+<li><a class="reference internal" href="#branching-alias">Branching (alias)</a></li>
+<li><a class="reference internal" href="#pressure-alias">Pressure (alias)</a></li>
+<li><a class="reference internal" href="#transition-alias">Transition (alias)</a></li>
+<li><a class="reference internal" href="#threshold-alias">Threshold (alias)</a></li>
+<li><a class="reference internal" href="#visibility-condition-alias">Visibility Condition (alias)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#status">Status</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

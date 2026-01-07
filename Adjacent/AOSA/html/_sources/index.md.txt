@@ -1,0 +1,18 @@
+# Atlas of Structural Admissibility
+
+```{toctree}
+:maxdepth: 2
+:caption: Core
+
+atlas_index
+dictionary
+track_system
+structural_boundary_conditions
+failure_geography
+inquiry_and_evaluation
+collapse_vs_branching_dynamics
+lenses_and_visibility_control
+cross_domain_translation_and_loss
+ingestion_and_integration
+
+```

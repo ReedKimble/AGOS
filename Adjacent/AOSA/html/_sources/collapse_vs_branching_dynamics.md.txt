@@ -1,0 +1,175 @@
+(collapse-vs-branching-dynamics)=
+# Collapse vs Branching Dynamics
+
+This document examines **collapse** and **branching** as opposing but non-symmetric structural dynamics governing how possibility space changes under pressure.
+
+Neither collapse nor branching is a success condition. Both are **consequences of constraint interaction**, visibility, and declaration.
+
+---
+
+## 0. Orientation
+
+- Collapse and branching are **cross-level dynamics**, not domain mechanisms.
+- Both describe changes in *admissible alternatives*, not truth or correctness.
+- The critical distinction is **declaration**: what loss or expansion is made explicit.
+
+---
+
+## 1. Possibility Space and Admissibility
+
+### Possibility Space
+
+Possibility space refers to the set of admissible alternatives available under current constraints.
+
+- It is not hypothetical imagination.
+- It is not epistemic uncertainty.
+- It is structurally defined by constraints, lenses, and declarations.
+
+Changes to possibility space are the only admissible way to describe collapse or branching.
+
+---
+
+## 2. Collapse (Undeclared Narrowing)
+
+### Description
+
+**Collapse** is the **undeclared reduction of admissible alternatives**.
+
+Collapse always involves loss, but that loss is:
+- not explicitly acknowledged,
+- not scoped,
+- and not reversible within the same regime.
+
+### Structural Conditions for Collapse
+
+Collapse typically occurs when:
+- pressure exceeds stability,
+- tolerance is exceeded,
+- and evaluation is invoked implicitly rather than declared.
+
+### Diagnostic Signals
+
+- Sudden disappearance of alternatives
+- Retrospective justification
+- Claims of inevitability or necessity
+
+### Structural Consequence
+
+Collapse reduces possibility space **without leaving a record** of what was lost.
+
+---
+
+## 3. Branching (Declared Expansion)
+
+### Description
+
+**Branching** is an **increase in admissible alternatives** made explicit under constraint.
+
+Branching does not invent structure; it reveals previously implicit alternatives or creates new distinctions via differentiation.
+
+### Structural Conditions for Branching
+
+Branching typically occurs when:
+- inquiry is sustained without premature evaluation,
+- lenses are adjusted rather than fixed,
+- and constraints are re-expressed without collapse.
+
+### Diagnostic Signals
+
+- Explicit articulation of alternatives
+- Preservation of multiple paths
+- Resistance to premature narrowing
+
+### Structural Consequence
+
+Branching widens possibility space while maintaining coherence.
+
+---
+
+## 4. Declared vs Undeclared Change
+
+### Declared Narrowing
+
+- Occurs via explicit projection or evaluation
+- Loss is acknowledged and scoped
+- Enables reversibility through re-entry
+
+### Undeclared Narrowing (Collapse)
+
+- Occurs implicitly under pressure
+- Loss is hidden or misattributed
+- Irreversible within the same regime
+
+### Declared Expansion (Branching)
+
+- Alternatives are made explicit
+- No loss is hidden
+- Structural load increases but coherence is preserved
+
+---
+
+## 5. Collapse Is Not the Opposite of Branching
+
+Although often treated as opposites, collapse and branching are **not symmetric**.
+
+- Collapse is loss without declaration.
+- Branching is expansion with declaration.
+
+The true opposite of collapse is **declared narrowing**, not branching.
+
+Branching and collapse may even co-occur at different levels.
+
+---
+
+## 6. Relationship to Decoherence and Instability
+
+- **Instability** describes a rate mismatch between pressure and stability.
+- **Decoherence** describes loss of coordination without elimination.
+
+Instability increases the *risk* of collapse but does not cause it.
+
+Collapse occurs only when narrowing happens without declaration.
+
+Branching can occur during instability if inquiry remains open and loss is resisted.
+
+---
+
+## 7. Visibility and Retrospective Illusion
+
+Collapse is often invisible to practitioners because:
+- lenses harden under pressure,
+- records replace memory of alternatives,
+- and justification occurs after loss.
+
+Branching remains visible because:
+- alternatives are tracked,
+- loss is not hidden,
+- and evaluation is deferred.
+
+---
+
+## 8. Common Misattributions
+
+- Treating collapse as convergence
+- Treating branching as indecision
+- Treating inevitability as proof
+- Treating loss as optimization
+
+Each misattribution masks a structural dynamic.
+
+---
+
+## 9. Implications for Inquiry and Domains
+
+- Healthy inquiry preserves branching until evaluation is declared.
+- Domains incentivize collapse due to survival pressure.
+- Cross-domain work is especially collapse-prone without explicit loss declaration.
+
+---
+
+## Status
+
+Field Guide Draft v0.1
+
+Collapse and branching dynamics are expected to sharpen under use, not refinement.
+

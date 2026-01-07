@@ -1,0 +1,161 @@
+(ingestion-and-integration)=
+# Ingestion and Integration
+
+This document governs how **external structure**—ideas, theories, grammars, domains, artifacts, or practices—is brought into contact with an existing structural system **without collapsing either side**.
+
+Ingestion is not acceptance. Integration is not synthesis.
+
+These rules apply **prior to, independent of, and beyond** the Atlas of Structural Admissibility. The Atlas is one possible host; the constraints here are **structural**, not institutional.
+
+---
+
+## 0. Orientation
+
+- **Ingestion** is contact between structures.
+- **Integration** is constrained placement relative to existing constraints.
+- Neither implies endorsement, preservation, or coherence.
+
+Structure does not grow by accumulation. It stabilizes by **admissible contact**.
+
+---
+
+## 1. What Ingestion Is
+
+### Description
+
+**Ingestion** is the act of bringing an external structure into *relational visibility*.
+
+An ingested structure may be:
+- a theory,
+- a paper,
+- a formal system,
+- a domain grammar,
+- a methodological practice,
+- or an operational artifact.
+
+Ingestion performs **no evaluation** and induces **no obligation**.
+
+---
+
+## 2. What Ingestion Is Not
+
+Ingestion is **not**:
+- validation,
+- agreement,
+- belief,
+- endorsement,
+- or adoption.
+
+Treating ingestion as any of the above produces authority leakage.
+
+---
+
+## 3. Integration (Constrained Placement)
+
+### Description
+
+**Integration** is the act of placing an ingested structure relative to:
+- known constraints,
+- active boundaries,
+- visible failure modes,
+- and admissible levels of operation.
+
+Integration answers only *placement questions*, such as:
+- Where does this structure operate?
+- Which boundaries does it repeatedly encounter?
+- What failure modes does it induce under pressure?
+
+Integration does **not** attempt to reconcile, optimize, or preserve the internal coherence of the ingested structure.
+
+---
+
+## 4. Structural Loss Is Necessary
+
+Integration necessarily incurs **structural loss**.
+
+Loss may include:
+- suppression of internal narratives,
+- collapse of domain-specific authority,
+- removal of explanatory ambition,
+- elimination of incompatible distinctions.
+
+Loss is not a defect. It is the **cost of contact**.
+
+Loss must be **explicitly declared** for integration to remain admissible.
+
+---
+
+## 5. Common Ingestion Failures
+
+### Archive Accretion
+
+- Structures accumulate without placement
+- Results in incoherent aggregation
+
+### Synthesis Illusion
+
+- Partial alignment mistaken for unity
+- Results in false coherence
+
+### Authority Importation
+
+- External validation standards propagate inward
+- Results in structural capture
+
+---
+
+## 6. Integration Without Assimilation
+
+Integration does not imply assimilation.
+
+Instead:
+- structures remain distinct,
+- only their *interactions* are tracked,
+- incompatibilities are preserved rather than resolved.
+
+This allows incompatible grammars to coexist without collapse.
+
+---
+
+## 7. Ingestion as Structural Pressure
+
+Ingested structures apply pressure by:
+- challenging existing boundaries,
+- exposing missing constraints,
+- or revealing previously invisible failure modes.
+
+Ingestion is therefore a **diagnostic operation**, not an additive one.
+
+---
+
+## 8. Integration Heuristics
+
+When integrating any external structure, ask:
+
+- What constraints does it assume?
+- What loss does it deny?
+- Where does it silently collapse?
+- Which lens does it harden?
+
+If these cannot be answered, integration has not occurred.
+
+---
+
+## 9. Relationship to Host Systems
+
+These constraints apply regardless of whether the host system is:
+- the Atlas of Structural Admissibility,
+- a research program,
+- a conceptual framework,
+- or an operational practice.
+
+The host system must adapt to ingestion pressure, not absorb it.
+
+---
+
+## Status
+
+Field Guide Draft v0.2
+
+Integration preserves structure by refusing synthesis.
+

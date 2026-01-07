@@ -1,0 +1,626 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Inquiry and Evaluation" href="inquiry_and_evaluation.html"><link rel="prev" title="Structural Boundary Conditions" href="structural_boundary_conditions.html">
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
+        <title>Failure Geography — A Field Guide - Atlas of Structural Admissibility [AOSA] 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Atlas of Structural Admissibility [AOSA] 0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <span class="sidebar-brand-text">Atlas of Structural Admissibility [AOSA] 0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Core</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="atlas_index.html">Atlas Index</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dictionary.html">Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="track_system.html">Internal Track System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structural_boundary_conditions.html">Structural Boundary Conditions</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Failure Geography — A Field Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inquiry_and_evaluation.html">Inquiry and Evaluation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collapse_vs_branching_dynamics.html">Collapse vs Branching Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lenses_and_visibility_control.html">Lenses &amp; Visibility Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cross_domain_translation_and_loss.html">Cross-Domain Translation &amp; Loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ingestion_and_integration.html">Ingestion and Integration</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/failure_geography.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="failure-geography-a-field-guide">
+<span id="failure-geography"></span><h1>Failure Geography — A Field Guide<a class="headerlink" href="#failure-geography-a-field-guide" title="Link to this heading">¶</a></h1>
+<p>This document maps <strong>failure as terrain</strong>, not error. Failure modes are treated as <em>regions, gradients, and attractors</em> that structure how grammars degrade under pressure.</p>
+<p>Failure is not a mistake to be corrected; it is a <strong>signal of boundary contact, overload, or misplacement</strong>.</p>
+<hr class="docutils" />
+<section id="how-to-use-this-field-guide">
+<h2>0. How to Use This Field Guide<a class="headerlink" href="#how-to-use-this-field-guide" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Read failures as <em>locations</em>, not accusations.</p></li>
+<li><p>Multiple failure modes may coexist; overlap is diagnostic.</p></li>
+<li><p>Escalation toward collapse is a trajectory, not an event.</p></li>
+<li><p>No failure mode is unique to a domain; domains differ only in how they mask them.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="scope-inflation-region">
+<h2>1. Scope Inflation Region<a class="headerlink" href="#scope-inflation-region" title="Link to this heading">¶</a></h2>
+<section id="terrain-description">
+<h3>Terrain Description<a class="headerlink" href="#terrain-description" title="Link to this heading">¶</a></h3>
+<p>A broad plateau where concepts appear to apply farther than they are admissible.</p>
+</section>
+<section id="typical-indicators">
+<h3>Typical Indicators<a class="headerlink" href="#typical-indicators" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Increasing generality of language</p></li>
+<li><p>Loss of explicit constraints</p></li>
+<li><p>Phrases like “in general,” “at all levels,” “ultimately”</p></li>
+</ul>
+</section>
+<section id="structural-cause">
+<h3>Structural Cause<a class="headerlink" href="#structural-cause" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Grammar exceeds its regime without declaring descent or loss</p></li>
+</ul>
+</section>
+<section id="common-misreading">
+<h3>Common Misreading<a class="headerlink" href="#common-misreading" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Interpreted as unification or deep insight</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="layer-collapse-basin">
+<h2>2. Layer Collapse Basin<a class="headerlink" href="#layer-collapse-basin" title="Link to this heading">¶</a></h2>
+<section id="id1">
+<h3>Terrain Description<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p>A steep basin where distinctions between structural levels disappear.</p>
+</section>
+<section id="id2">
+<h3>Typical Indicators<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Grammar-level claims treated as ontological</p></li>
+<li><p>Domain mechanisms used to justify grammar</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Structural Cause<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Failure to maintain level separation under pressure</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Common Misreading<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Treated as explanatory elegance or simplicity</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="bookkeeping-to-mechanism-attractor">
+<h2>3. Bookkeeping-to-Mechanism Attractor<a class="headerlink" href="#bookkeeping-to-mechanism-attractor" title="Link to this heading">¶</a></h2>
+<section id="id5">
+<h3>Terrain Description<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<p>A strong attractor where records, models, or symbols are mistaken for causal agents.</p>
+</section>
+<section id="id6">
+<h3>Typical Indicators<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Data “drives” outcomes</p></li>
+<li><p>Algorithms “decide” or “know”</p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Structural Cause<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>External bookkeeping persistence mistaken for structure</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>Common Misreading<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Interpreted as technological or formal power</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="approximation-reification-ridge">
+<h2>4. Approximation Reification Ridge<a class="headerlink" href="#approximation-reification-ridge" title="Link to this heading">¶</a></h2>
+<section id="id9">
+<h3>Terrain Description<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<p>A narrowing ridge where approximations harden into assumed reality.</p>
+</section>
+<section id="id10">
+<h3>Typical Indicators<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Suppression of error terms</p></li>
+<li><p>Resistance to model revision</p></li>
+</ul>
+</section>
+<section id="id11">
+<h3>Structural Cause<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Declared loss forgotten under repeated use</p></li>
+</ul>
+</section>
+<section id="id12">
+<h3>Common Misreading<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Treated as convergence or proof</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="narrative-gravity-well">
+<h2>5. Narrative Gravity Well<a class="headerlink" href="#narrative-gravity-well" title="Link to this heading">¶</a></h2>
+<section id="id13">
+<h3>Terrain Description<a class="headerlink" href="#id13" title="Link to this heading">¶</a></h3>
+<p>A deep well where explanatory stories overpower structural constraint.</p>
+</section>
+<section id="id14">
+<h3>Typical Indicators<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Anthropomorphic language</p></li>
+<li><p>Teleological framing</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>Structural Cause<a class="headerlink" href="#id15" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Human interpretive bias under uncertainty</p></li>
+</ul>
+</section>
+<section id="id16">
+<h3>Common Misreading<a class="headerlink" href="#id16" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Treated as understanding or meaning</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="premature-closure-cliff">
+<h2>6. Premature Closure Cliff<a class="headerlink" href="#premature-closure-cliff" title="Link to this heading">¶</a></h2>
+<section id="id17">
+<h3>Terrain Description<a class="headerlink" href="#id17" title="Link to this heading">¶</a></h3>
+<p>A sharp cliff marking forced termination of inquiry.</p>
+</section>
+<section id="id18">
+<h3>Typical Indicators<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Definitive language</p></li>
+<li><p>Appeals to final authority</p></li>
+</ul>
+</section>
+<section id="id19">
+<h3>Structural Cause<a class="headerlink" href="#id19" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Intolerance for ambiguity or instability</p></li>
+</ul>
+</section>
+<section id="id20">
+<h3>Common Misreading<a class="headerlink" href="#id20" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Treated as rigor or decisiveness</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="authority-capture-zone">
+<h2>7. Authority Capture Zone<a class="headerlink" href="#authority-capture-zone" title="Link to this heading">¶</a></h2>
+<section id="id21">
+<h3>Terrain Description<a class="headerlink" href="#id21" title="Link to this heading">¶</a></h3>
+<p>A fortified region where structural guidance becomes enforcement.</p>
+</section>
+<section id="id22">
+<h3>Typical Indicators<a class="headerlink" href="#id22" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Policing of interpretation</p></li>
+<li><p>Credential-based dismissal</p></li>
+</ul>
+</section>
+<section id="id23">
+<h3>Structural Cause<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Boundary between constraint and power erased</p></li>
+</ul>
+</section>
+<section id="id24">
+<h3>Common Misreading<a class="headerlink" href="#id24" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Treated as quality control</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="collapse-basin">
+<h2>8. Collapse Basin<a class="headerlink" href="#collapse-basin" title="Link to this heading">¶</a></h2>
+<section id="id25">
+<h3>Terrain Description<a class="headerlink" href="#id25" title="Link to this heading">¶</a></h3>
+<p>A low basin representing undeclared loss of admissible alternatives.</p>
+</section>
+<section id="id26">
+<h3>Typical Indicators<a class="headerlink" href="#id26" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Irreversible narrowing unnoticed by practitioners</p></li>
+<li><p>Vanishing of prior distinctions</p></li>
+</ul>
+</section>
+<section id="id27">
+<h3>Structural Cause<a class="headerlink" href="#id27" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Pressure exceeds stability without declaration</p></li>
+</ul>
+</section>
+<section id="id28">
+<h3>Common Misreading<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Treated as convergence or inevitability</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="typical-descent-paths">
+<h2>9. Typical Descent Paths<a class="headerlink" href="#typical-descent-paths" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Scope Inflation → Layer Collapse → Bookkeeping Attractor</p></li>
+<li><p>Approximation Reification → Narrative Gravity → Premature Closure</p></li>
+<li><p>Authority Capture → Collapse Basin</p></li>
+</ul>
+<p>These paths are <strong>predictive</strong>, not prescriptive.</p>
+</section>
+<hr class="docutils" />
+<section id="status">
+<h2>Status<a class="headerlink" href="#status" title="Link to this heading">¶</a></h2>
+<p>Field Guide Draft v0.1</p>
+<p>Failure regions are expected to sharpen with use.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="inquiry_and_evaluation.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Inquiry and Evaluation</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="structural_boundary_conditions.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Structural Boundary Conditions</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Reed Kimble (Structural Tooling Assistance by ChatGPT)
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Failure Geography — A Field Guide</a><ul>
+<li><a class="reference internal" href="#how-to-use-this-field-guide">0. How to Use This Field Guide</a></li>
+<li><a class="reference internal" href="#scope-inflation-region">1. Scope Inflation Region</a><ul>
+<li><a class="reference internal" href="#terrain-description">Terrain Description</a></li>
+<li><a class="reference internal" href="#typical-indicators">Typical Indicators</a></li>
+<li><a class="reference internal" href="#structural-cause">Structural Cause</a></li>
+<li><a class="reference internal" href="#common-misreading">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#layer-collapse-basin">2. Layer Collapse Basin</a><ul>
+<li><a class="reference internal" href="#id1">Terrain Description</a></li>
+<li><a class="reference internal" href="#id2">Typical Indicators</a></li>
+<li><a class="reference internal" href="#id3">Structural Cause</a></li>
+<li><a class="reference internal" href="#id4">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bookkeeping-to-mechanism-attractor">3. Bookkeeping-to-Mechanism Attractor</a><ul>
+<li><a class="reference internal" href="#id5">Terrain Description</a></li>
+<li><a class="reference internal" href="#id6">Typical Indicators</a></li>
+<li><a class="reference internal" href="#id7">Structural Cause</a></li>
+<li><a class="reference internal" href="#id8">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#approximation-reification-ridge">4. Approximation Reification Ridge</a><ul>
+<li><a class="reference internal" href="#id9">Terrain Description</a></li>
+<li><a class="reference internal" href="#id10">Typical Indicators</a></li>
+<li><a class="reference internal" href="#id11">Structural Cause</a></li>
+<li><a class="reference internal" href="#id12">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#narrative-gravity-well">5. Narrative Gravity Well</a><ul>
+<li><a class="reference internal" href="#id13">Terrain Description</a></li>
+<li><a class="reference internal" href="#id14">Typical Indicators</a></li>
+<li><a class="reference internal" href="#id15">Structural Cause</a></li>
+<li><a class="reference internal" href="#id16">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#premature-closure-cliff">6. Premature Closure Cliff</a><ul>
+<li><a class="reference internal" href="#id17">Terrain Description</a></li>
+<li><a class="reference internal" href="#id18">Typical Indicators</a></li>
+<li><a class="reference internal" href="#id19">Structural Cause</a></li>
+<li><a class="reference internal" href="#id20">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#authority-capture-zone">7. Authority Capture Zone</a><ul>
+<li><a class="reference internal" href="#id21">Terrain Description</a></li>
+<li><a class="reference internal" href="#id22">Typical Indicators</a></li>
+<li><a class="reference internal" href="#id23">Structural Cause</a></li>
+<li><a class="reference internal" href="#id24">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#collapse-basin">8. Collapse Basin</a><ul>
+<li><a class="reference internal" href="#id25">Terrain Description</a></li>
+<li><a class="reference internal" href="#id26">Typical Indicators</a></li>
+<li><a class="reference internal" href="#id27">Structural Cause</a></li>
+<li><a class="reference internal" href="#id28">Common Misreading</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#typical-descent-paths">9. Typical Descent Paths</a></li>
+<li><a class="reference internal" href="#status">Status</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

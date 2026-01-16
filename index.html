@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGOS - A Grammar of Structure</title>
+    <style>
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #e9ecef;
+            --text-primary: #212529;
+            --text-secondary: #495057;
+            --text-muted: #6c757d;
+            --accent-primary: #2c5aa0;
+            --accent-hover: #1e3a5f;
+            --border-color: #dee2e6;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --tag-bg: #e7f1ff;
+            --tag-text: #0d47a1;
+            --tag-active-bg: #0d47a1;
+            --tag-active-text: #ffffff;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #1a1a1a;
+                --bg-secondary: #2d2d2d;
+                --bg-tertiary: #3a3a3a;
+                --text-primary: #e9ecef;
+                --text-secondary: #ced4da;
+                --text-muted: #adb5bd;
+                --accent-primary: #5b9bd5;
+                --accent-hover: #7ab5e8;
+                --border-color: #495057;
+                --shadow: rgba(0, 0, 0, 0.3);
+                --tag-bg: #1e3a5f;
+                --tag-text: #7ab5e8;
+                --tag-active-bg: #5b9bd5;
+                --tag-active-text: #ffffff;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-section h2 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .hero-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .hero-link:hover {
+            background: var(--accent-hover);
+        }
+
+        .controls {
+            margin-bottom: 2rem;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .search-box:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+        }
+
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag-filter {
+            padding: 0.4rem 0.8rem;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .tag-filter:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+
+        .tag-filter.active {
+            background: var(--tag-active-bg);
+            color: var(--tag-active-text);
+        }
+
+        .stats {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .subsection {
+            margin-bottom: 2rem;
+        }
+
+        .subsection-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .papers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .paper-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow);
+            border-color: var(--accent-primary);
+        }
+
+        .paper-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .paper-link:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .paper-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            margin-top: auto;
+        }
+
+        .paper-tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            background: var(--tag-bg);
+            color: var(--tag-text);
+            border-radius: 12px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .papers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-tags {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AGOS</h1>
+            <p class="subtitle">A Grammar of Structure & Adjacent Papers</p>
+            <p class="subtitle">Academic Repository of Structural Theory and Applications</p>
+        </header>
+
+        <div class="hero-section">
+            <h2>Atlas of Structural Admissibility (AOSA)</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-secondary);">Comprehensive visual atlas of structural patterns and admissibility conditions</p>
+            <a href="Adjacent/AOSA/html/index.html" class="hero-link">Explore AOSA →</a>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="searchBox" class="search-box" placeholder="Search papers by title or path...">
+            
+            <div class="filter-tags" id="filterTags"></div>
+            
+            <div class="stats" id="stats"></div>
+        </div>
+
+        <main id="papersContainer"></main>
+
+        <footer>
+            <p>AGOS Repository - A Grammar of Structure</p>
+            <p>Use the search and filter tools to explore the collection</p>
+        </footer>
+    </div>
+
+    <script>
+        // Complete papers data
+        const papers = [
+            // A Grammar of Structure - Orientation
+            { path: "A Grammar of Structure/!!_Orientation And Posture — Before Proceeding.pdf", title: "Orientation And Posture — Before Proceeding", tags: ["Meta", "Orientation"], section: "orientation" },
+            { path: "A Grammar of Structure/!!_Provenance And Co-authorship Statement.pdf", title: "Provenance And Co-authorship Statement", tags: ["Meta", "Orientation"], section: "orientation" },
+            
+            // A Grammar of Structure - Core Entry
+            { path: "A Grammar of Structure/!_Corpus Entry_ A Multi‑door Introduction.pdf", title: "Corpus Entry: A Multi‑door Introduction", tags: ["Meta", "Orientation"], section: "core" },
+            { path: "A Grammar of Structure/!_Corpus Entry_ Meta‑preface And Reader Guide.pdf", title: "Corpus Entry: Meta‑preface And Reader Guide", tags: ["Meta", "Orientation"], section: "core" },
+            { path: "A Grammar of Structure/!_Criterion For Legitimate Refutation.pdf", title: "Criterion For Legitimate Refutation", tags: ["Epistemology", "Formal Methods"], section: "core" },
+            { path: "A Grammar of Structure/!_On Non-local Consequences And Structural Risk.pdf", title: "On Non-local Consequences And Structural Risk", tags: ["Failure Modes", "Structural Theory"], section: "core" },
+            { path: "A Grammar of Structure/!_Principle Of Stewardship.pdf", title: "Principle Of Stewardship", tags: ["Philosophy", "Structural Theory"], section: "core" },
+            { path: "A Grammar of Structure/Finding Your Own Way Through The Corpus (optional).pdf", title: "Finding Your Own Way Through The Corpus (optional)", tags: ["Meta"], section: "core" },
+            { path: "A Grammar of Structure/On Category Errors, Attribution, And Authorial Non-role.pdf", title: "On Category Errors, Attribution, And Authorial Non-role", tags: ["Meta", "Epistemology"], section: "core" },
+            { path: "A Grammar of Structure/Suggested Ways To Explore This Corpus (optional).pdf", title: "Suggested Ways To Explore This Corpus (optional)", tags: ["Meta"], section: "core" },
+            
+            // A Grammar of Structure - 00_Preface
+            { path: "A Grammar of Structure/00_Preface/00_On Frameworks That Cannot Be Categorized.pdf", title: "On Frameworks That Cannot Be Categorized", tags: ["Philosophy", "Structural Theory"], section: "preface" },
+            { path: "A Grammar of Structure/00_Preface/01_What Is a Question.pdf", title: "What Is a Question", tags: ["Epistemology", "Philosophy"], section: "preface" },
+            { path: "A Grammar of Structure/00_Preface/02_Abstraction and the Conditions of Structure.pdf", title: "Abstraction and the Conditions of Structure", tags: ["Structural Theory", "Formal Methods"], section: "preface" },
+            { path: "A Grammar of Structure/00_Preface/03_Reading Vorticity Space.pdf", title: "Reading Vorticity Space", tags: ["Meta", "Structural Theory"], section: "preface" },
+            
+            // A Grammar of Structure - Main Papers
+            { path: "A Grammar of Structure/01_Vorticity Space/VorticitySpace.pdf", title: "Vorticity Space", tags: ["Structural Theory", "Physics & Cosmology"], section: "main" },
+            { path: "A Grammar of Structure/02_UNS/UNS.pdf", title: "UNS (Universal Notation System)", tags: ["Structural Theory", "Formal Methods"], section: "main" },
+            { path: "A Grammar of Structure/03_UNS-C/UNS-C.pdf", title: "UNS-C (UNS Constrained)", tags: ["Structural Theory", "Formal Methods"], section: "main" },
+            { path: "A Grammar of Structure/04_CGP/CGP.pdf", title: "CGP (Convergent Grammar Principle)", tags: ["Structural Theory", "Formal Methods"], section: "main" },
+            { path: "A Grammar of Structure/05_UMAT/UMAT.pdf", title: "UMAT (Universal Meta-Abstraction Theory)", tags: ["Structural Theory", "Philosophy"], section: "main" },
+            { path: "A Grammar of Structure/06_TOCO-EOD/TOCO-EOD.pdf", title: "TOCO-EOD (Theory of Compositional Operators - Emergence of Dimension)", tags: ["Structural Theory", "Physics & Cosmology"], section: "main" },
+            
+            // A Grammar of Structure - 07_Downstream/AI
+            { path: "A Grammar of Structure/07_Downstream/AI/On Persuasion Pressure In Generative Systems.pdf", title: "On Persuasion Pressure In Generative Systems", tags: ["AI & Technology", "Failure Modes"], section: "downstream_ai" },
+            { path: "A Grammar of Structure/07_Downstream/AI/Principle Of Ai Co-authorship.pdf", title: "Principle Of AI Co-authorship", tags: ["AI & Technology", "Philosophy"], section: "downstream_ai" },
+            { path: "A Grammar of Structure/07_Downstream/AI/Uns Context Engine Technical Spec.pdf", title: "UNS Context Engine Technical Spec", tags: ["AI & Technology", "Computation"], section: "downstream_ai" },
+            { path: "A Grammar of Structure/07_Downstream/AI/Uns Reasoning Layer Proposal.pdf", title: "UNS Reasoning Layer Proposal", tags: ["AI & Technology", "Computation"], section: "downstream_ai" },
+            
+            // A Grammar of Structure - 07_Downstream/America
+            { path: "A Grammar of Structure/07_Downstream/America/Translating the American Dream.pdf", title: "Translating the American Dream", tags: ["Human Systems", "Philosophy"], section: "downstream_america" },
+            
+            // A Grammar of Structure - 07_Downstream/Coherence and Structure
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/01_The Value Of Structured Reasoning.pdf", title: "The Value Of Structured Reasoning", tags: ["Epistemology", "Structural Theory"], section: "downstream_coherence" },
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/02_Coherence, Balance, and Closure Under Differentiation.pdf", title: "Coherence, Balance, and Closure Under Differentiation", tags: ["Structural Theory", "Formal Methods"], section: "downstream_coherence" },
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/03_Coherence Under Constraint.pdf", title: "Coherence Under Constraint", tags: ["Structural Theory", "Formal Methods"], section: "downstream_coherence" },
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/04_Pressure, Response, And Coherence.pdf", title: "Pressure, Response, And Coherence", tags: ["Structural Theory", "Human Systems"], section: "downstream_coherence" },
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/05_Misinterpreted Signals Under Misaligned Translations.pdf", title: "Misinterpreted Signals Under Misaligned Translations", tags: ["Failure Modes", "Epistemology"], section: "downstream_coherence" },
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/06_Misattribution Of Structure As Doctrine.pdf", title: "Misattribution Of Structure As Doctrine", tags: ["Failure Modes", "Philosophy"], section: "downstream_coherence" },
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/07_Stewardship Under Pressure.pdf", title: "Stewardship Under Pressure", tags: ["Philosophy", "Human Systems"], section: "downstream_coherence" },
+            { path: "A Grammar of Structure/07_Downstream/Coherence and Structure/08_Subsequent/08_Blasphemy - The Structure of God.pdf", title: "Blasphemy - The Structure of God", tags: ["Philosophy", "Structural Theory"], section: "downstream_coherence" },
+            
+            // A Grammar of Structure - 07_Downstream/Other
+            { path: "A Grammar of Structure/07_Downstream/Contemporary Short Fiction/A Story of Filters.pdf", title: "A Story of Filters", tags: ["Human Systems"], section: "downstream_other" },
+            { path: "A Grammar of Structure/07_Downstream/Corpus Futures_ Mitigating Risk.pdf", title: "Corpus Futures: Mitigating Risk", tags: ["Meta", "Failure Modes"], section: "downstream_other" },
+            { path: "A Grammar of Structure/07_Downstream/Correct And Incomplete/Correct And Incomplete.pdf", title: "Correct And Incomplete", tags: ["Epistemology", "Formal Methods"], section: "downstream_other" },
+            
+            // A Grammar of Structure - 07_Downstream/Implementation Examples
+            { path: "A Grammar of Structure/07_Downstream/Implementation Examples/Manifold_GM_Manual.pdf", title: "Manifold GM Manual", tags: ["Computation", "Structural Theory"], section: "downstream_impl" },
+            { path: "A Grammar of Structure/07_Downstream/Implementation Examples/Manifold_Players_Guide.pdf", title: "Manifold Players Guide", tags: ["Computation", "Structural Theory"], section: "downstream_impl" },
+            { path: "A Grammar of Structure/07_Downstream/Implementation Examples/SSP.pdf", title: "SSP (Structured Symbolic Protocol)", tags: ["Computation", "Formal Methods"], section: "downstream_impl" },
+            { path: "A Grammar of Structure/07_Downstream/Implementation Examples/UNSOS.pdf", title: "UNSOS (UNS Operating System)", tags: ["Computation", "AI & Technology"], section: "downstream_impl" },
+            { path: "A Grammar of Structure/07_Downstream/Implementation Examples/Uns Architecture Overview.pdf", title: "UNS Architecture Overview", tags: ["Computation", "Structural Theory"], section: "downstream_impl" },
+            { path: "A Grammar of Structure/07_Downstream/Implementation Examples/[SLIM] - A Structural Lens For Interdisciplinary Mathematics.pdf", title: "SLIM - A Structural Lens For Interdisciplinary Mathematics", tags: ["Computation", "Formal Methods"], section: "downstream_impl" },
+            { path: "A Grammar of Structure/07_Downstream/Implementation Examples/uns_convergent_grammar_principle_periodic_table_case_study.pdf", title: "UNS Convergent Grammar Principle: Periodic Table Case Study", tags: ["Computation", "Physics & Cosmology"], section: "downstream_impl" },
+            
+            // A Grammar of Structure - 07_Downstream/Masonic
+            { path: "A Grammar of Structure/07_Downstream/Masonic Tradition/Sacred Geometry And Uns Continuity — Version 2.pdf", title: "Sacred Geometry And UNS Continuity", tags: ["Philosophy", "Structural Theory"], section: "downstream_masonic" },
+            
+            // A Grammar of Structure - 07_Downstream/Moments of Insight
+            { path: "A Grammar of Structure/07_Downstream/Moments of Insight/Coherence, Constraint, And Alignment.pdf", title: "Coherence, Constraint, And Alignment", tags: ["Structural Theory", "Epistemology"], section: "downstream_insight" },
+            { path: "A Grammar of Structure/07_Downstream/Moments of Insight/Meta-overview — Structural Incompatibility Insight.pdf", title: "Meta-overview — Structural Incompatibility Insight", tags: ["Meta", "Structural Theory"], section: "downstream_insight" },
+            
+            // A Grammar of Structure - 07_Downstream/Physics
+            { path: "A Grammar of Structure/07_Downstream/Physics/Constraint Anchors, Randomness, And Coherence Below Quantum Theory.pdf", title: "Constraint Anchors, Randomness, And Coherence Below Quantum Theory", tags: ["Physics & Cosmology", "Structural Theory"], section: "downstream_physics" },
+            
+            // A Grammar of Structure - Authorial History
+            { path: "A Grammar of Structure/Authorial History/!_Authorial History — Orientation.pdf", title: "Authorial History — Orientation", tags: ["Meta"], section: "authorial" },
+            { path: "A Grammar of Structure/Authorial History/Completion As Origin Axiom.pdf", title: "Completion As Origin Axiom", tags: ["Philosophy", "Structural Theory"], section: "authorial" },
+            { path: "A Grammar of Structure/Authorial History/Uns Emergence, Dimensional Equivalence, And Structural Completeness — Conversation Overview.pdf", title: "UNS Emergence, Dimensional Equivalence, And Structural Completeness", tags: ["Structural Theory", "Philosophy"], section: "authorial" },
+            
+            // A Grammar of Structure - Book Bindings
+            { path: "A Grammar of Structure/Book Bindings/back_cover_heading_editor_draft.pdf", title: "Back Cover Heading (Editor Draft)", tags: ["Meta"], section: "bindings" },
+            { path: "A Grammar of Structure/Book Bindings/title_page_almost_nothing_properly_arranged.pdf", title: "Title Page: Almost Nothing Properly Arranged", tags: ["Meta"], section: "bindings" },
+            
+            // A Grammar of Structure - Invariants
+            { path: "A Grammar of Structure/Invariants/!_On Invariants In This Corpus.pdf", title: "On Invariants In This Corpus", tags: ["Meta", "Structural Theory"], section: "invariants" },
+            { path: "A Grammar of Structure/Invariants/First-level Emergent Structural Invariants.pdf", title: "First-level Emergent Structural Invariants", tags: ["Structural Theory", "Formal Methods"], section: "invariants" },
+            { path: "A Grammar of Structure/Invariants/Invariant #42 - Avoid Premature Closure.pdf", title: "Invariant #42 - Avoid Premature Closure", tags: ["Structural Theory", "Philosophy"], section: "invariants" },
+            { path: "A Grammar of Structure/Invariants/Invariant - Random.pdf", title: "Invariant - Random", tags: ["Structural Theory"], section: "invariants" },
+            
+            // Adjacent Papers
+            { path: "Adjacent/!_Corpus Entry_ A Multi‑door Introduction.pdf", title: "Corpus Entry: A Multi‑door Introduction", tags: ["Meta", "Orientation"], section: "adjacent_core" },
+            { path: "Adjacent/!_Corpus Entry_ Meta‑preface And Reader Guide.pdf", title: "Corpus Entry: Meta‑preface And Reader Guide", tags: ["Meta", "Orientation"], section: "adjacent_core" },
+            { path: "Adjacent/$_Four Fundamental Fantasy Physics Fallacies.pdf", title: "Four Fundamental Fantasy Physics Fallacies", tags: ["Failure Modes", "Physics & Cosmology"], section: "adjacent_core" },
+            { path: "Adjacent/$_Primary Structural Failure Modes In Speculative Physics Work.pdf", title: "Primary Structural Failure Modes In Speculative Physics Work", tags: ["Failure Modes", "Physics & Cosmology"], section: "adjacent_core" },
+            { path: "Adjacent/AOSA/Atlas-of-Structural-Admissibility.pdf", title: "Atlas of Structural Admissibility (PDF)", tags: ["Structural Theory", "Formal Methods"], section: "adjacent_core" },
+            { path: "Adjacent/A Grammar Of Emergence.pdf", title: "A Grammar Of Emergence", tags: ["Structural Theory", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/A Structural Ontology Of Physical Reality.pdf", title: "A Structural Ontology Of Physical Reality", tags: ["Physics & Cosmology", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/After The One_ Asymmetry, Closure, And The Non-terminality Of Evenness.pdf", title: "After The One: Asymmetry, Closure, And The Non-terminality Of Evenness", tags: ["Prime Numbers", "Formal Methods"], section: "adjacent_papers" },
+            { path: "Adjacent/Ai Art Modular Part1 Intro Core Arguments.pdf", title: "AI Art Modular Part 1: Intro Core Arguments", tags: ["AI & Technology", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Ai Art Modular Part2 Tracing Logic.pdf", title: "AI Art Modular Part 2: Tracing Logic", tags: ["AI & Technology", "Epistemology"], section: "adjacent_papers" },
+            { path: "Adjacent/Ai Art Modular Part3 Scale Scenarios.pdf", title: "AI Art Modular Part 3: Scale Scenarios", tags: ["AI & Technology", "Human Systems"], section: "adjacent_papers" },
+            { path: "Adjacent/Ai Art Modular Part4 Humanity Conclusion.pdf", title: "AI Art Modular Part 4: Humanity Conclusion", tags: ["AI & Technology", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Bathtime Addendum.pdf", title: "Bathtime Addendum", tags: ["Human Systems", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Binding Gravity.pdf", title: "Binding Gravity", tags: ["Physics & Cosmology", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Building A Lens Of Truth.pdf", title: "Building A Lens Of Truth", tags: ["Epistemology", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Collapse As Integration.pdf", title: "Collapse As Integration", tags: ["Structural Theory", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Comedy As Release.pdf", title: "Comedy As Release", tags: ["Human Systems", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Crayon Box Analogy.pdf", title: "Crayon Box Analogy", tags: ["Epistemology", "Human Systems"], section: "adjacent_papers" },
+            { path: "Adjacent/Curating The Flow.pdf", title: "Curating The Flow", tags: ["Human Systems", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Emergent Axes Of Inquiry And Integration.pdf", title: "Emergent Axes Of Inquiry And Integration", tags: ["Epistemology", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Emotional Response As Signal.pdf", title: "Emotional Response As Signal", tags: ["Human Systems", "Epistemology"], section: "adjacent_papers" },
+            { path: "Adjacent/Evolution As Iteration.pdf", title: "Evolution As Iteration", tags: ["Structural Theory", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/External Bookkeeping As A Structural Operator.pdf", title: "External Bookkeeping As A Structural Operator", tags: ["Structural Theory", "Computation"], section: "adjacent_papers" },
+            { path: "Adjacent/Fate (protodomain).pdf", title: "Fate (protodomain)", tags: ["Philosophy", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/From Speculation To Fantasy.pdf", title: "From Speculation To Fantasy", tags: ["Epistemology", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Generational Formalization.pdf", title: "Generational Formalization", tags: ["Structural Theory", "Human Systems"], section: "adjacent_papers" },
+            { path: "Adjacent/God As Structural Continuation (protodomain).pdf", title: "God As Structural Continuation (protodomain)", tags: ["Philosophy", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/God Before Gods.pdf", title: "God Before Gods", tags: ["Philosophy", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Historical Comparison Uns Newton Einstein Shannon Von Neumann.pdf", title: "Historical Comparison: UNS, Newton, Einstein, Shannon, Von Neumann", tags: ["Structural Theory", "Physics & Cosmology"], section: "adjacent_papers" },
+            { path: "Adjacent/Ideal States.pdf", title: "Ideal States", tags: ["Philosophy", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Ignorance Is Bliss.pdf", title: "Ignorance Is Bliss", tags: ["Human Systems", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Implicit Memory, Constraint Persistence, And Operator Selection Under Pressure.pdf", title: "Implicit Memory, Constraint Persistence, And Operator Selection Under Pressure", tags: ["Structural Theory", "Human Systems"], section: "adjacent_papers" },
+            { path: "Adjacent/Landscape Overview_ Coherence And Structure Across Domains.pdf", title: "Landscape Overview: Coherence And Structure Across Domains", tags: ["Structural Theory", "Meta"], section: "adjacent_papers" },
+            { path: "Adjacent/Lens Application And Emergent Invariant.pdf", title: "Lens Application And Emergent Invariant", tags: ["Structural Theory", "Formal Methods"], section: "adjacent_papers" },
+            { path: "Adjacent/Metaphysical Unification Speculative Paper.pdf", title: "Metaphysical Unification Speculative Paper", tags: ["Philosophy", "Physics & Cosmology"], section: "adjacent_papers" },
+            { path: "Adjacent/Neither Artificial Nor Intelligent.pdf", title: "Neither Artificial Nor Intelligent", tags: ["AI & Technology", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Pressure Migration Vs Confrontation.pdf", title: "Pressure Migration Vs Confrontation", tags: ["Human Systems", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Prime Articulation Theory — Formal Experimental Specification.pdf", title: "Prime Articulation Theory — Formal Experimental Specification", tags: ["Prime Numbers", "Formal Methods"], section: "adjacent_papers" },
+            { path: "Adjacent/Prime Articulation Theory.pdf", title: "Prime Articulation Theory", tags: ["Prime Numbers", "Formal Methods"], section: "adjacent_papers" },
+            { path: "Adjacent/Primes As Necessary Words_ A Grammar Of Articulation, Panic, And Continuation.pdf", title: "Primes As Necessary Words: A Grammar Of Articulation, Panic, And Continuation", tags: ["Prime Numbers", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Processing Grammar Under Constraint.pdf", title: "Processing Grammar Under Constraint", tags: ["Structural Theory", "Computation"], section: "adjacent_papers" },
+            { path: "Adjacent/Providence Note — Protodomain Boundary Interaction.pdf", title: "Providence Note — Protodomain Boundary Interaction", tags: ["Philosophy", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Regarding God and Coherence.pdf", title: "Regarding God and Coherence", tags: ["Philosophy", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Resolving Stale State.pdf", title: "Resolving Stale State", tags: ["Computation", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Sacrifice As A Non-computable Operator In Closure Grammars.pdf", title: "Sacrifice As A Non-computable Operator In Closure Grammars", tags: ["Philosophy", "Formal Methods"], section: "adjacent_papers" },
+            { path: "Adjacent/Sleep And Attention.pdf", title: "Sleep And Attention", tags: ["Human Systems", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/The Coin Of Faith And Hope.pdf", title: "The Coin Of Faith And Hope", tags: ["Philosophy", "Human Systems"], section: "adjacent_papers" },
+            { path: "Adjacent/The Fungal Nature Of Humanity.pdf", title: "The Fungal Nature Of Humanity", tags: ["Human Systems", "Philosophy"], section: "adjacent_papers" },
+            { path: "Adjacent/Uns Linux Comparison.pdf", title: "UNS Linux Comparison", tags: ["Computation", "Structural Theory"], section: "adjacent_papers" },
+            { path: "Adjacent/Uns Theory And Hypothesis Synopsis.pdf", title: "UNS Theory And Hypothesis Synopsis", tags: ["Structural Theory", "Meta"], section: "adjacent_papers" },
+            { path: "Adjacent/When God Blinks.pdf", title: "When God Blinks", tags: ["Philosophy", "Human Systems"], section: "adjacent_papers" },
+            { path: "Adjacent/Words As Operators.pdf", title: "Words As Operators", tags: ["Structural Theory", "Epistemology"], section: "adjacent_papers" },
+            { path: "Adjacent/critical_comparison_summary-Processing Grammar-vs-Emergence+Coherence Theories.pdf", title: "Critical Comparison: Processing Grammar vs Emergence+Coherence Theories", tags: ["Structural Theory", "Epistemology"], section: "adjacent_papers" }
+        ];
+
+        // Extract all unique tags
+        const allTags = [...new Set(papers.flatMap(p => p.tags))].sort();
+
+        // State
+        let activeFilters = new Set();
+        let searchQuery = '';
+
+        // Section metadata
+        const sections = {
+            orientation: { title: "Orientation Papers", description: "Essential starting points for understanding the corpus" },
+            core: { title: "Core Entry & Principles", description: "Foundational principles and entry guides" },
+            preface: { title: "Preface - Foundations", description: "Preparatory materials for understanding the grammar" },
+            main: { title: "Main Theory Papers", description: "The six core theoretical frameworks" },
+            downstream_ai: { title: "Applications: AI & Technology", description: "" },
+            downstream_america: { title: "Applications: Cultural Analysis", description: "" },
+            downstream_coherence: { title: "Applications: Coherence & Structure", description: "" },
+            downstream_other: { title: "Applications: General", description: "" },
+            downstream_impl: { title: "Applications: Implementation Examples", description: "" },
+            downstream_masonic: { title: "Applications: Geometric & Traditional", description: "" },
+            downstream_insight: { title: "Applications: Moments of Insight", description: "" },
+            downstream_physics: { title: "Applications: Physics", description: "" },
+            authorial: { title: "Authorial History", description: "Context and emergence of the framework" },
+            bindings: { title: "Book Bindings", description: "Proposed book materials" },
+            invariants: { title: "Invariants", description: "Structural invariants identified in the corpus" },
+            adjacent_core: { title: "Adjacent: Core Entry", description: "Entry points for adjacent works" },
+            adjacent_papers: { title: "Adjacent Papers", description: "Related theoretical explorations and applications" }
+        };
+
+        // Initialize
+        function init() {
+            renderFilterTags();
+            renderPapers();
+            updateStats();
+
+            document.getElementById('searchBox').addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase();
+                renderPapers();
+                updateStats();
+            });
+        }
+
+        function renderFilterTags() {
+            const container = document.getElementById('filterTags');
+            container.innerHTML = allTags.map(tag => 
+                `<button class="tag-filter" data-tag="${tag}">${tag}</button>`
+            ).join('');
+
+            container.querySelectorAll('.tag-filter').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const tag = btn.dataset.tag;
+                    if (activeFilters.has(tag)) {
+                        activeFilters.delete(tag);
+                        btn.classList.remove('active');
+                    } else {
+                        activeFilters.add(tag);
+                        btn.classList.add('active');
+                    }
+                    renderPapers();
+                    updateStats();
+                });
+            });
+        }
+
+        function filterPapers() {
+            return papers.filter(paper => {
+                const matchesSearch = !searchQuery || 
+                    paper.title.toLowerCase().includes(searchQuery) ||
+                    paper.path.toLowerCase().includes(searchQuery);
+                
+                const matchesTags = activeFilters.size === 0 ||
+                    paper.tags.some(tag => activeFilters.has(tag));
+                
+                return matchesSearch && matchesTags;
+            });
+        }
+
+        function renderPapers() {
+            const filtered = filterPapers();
+            const container = document.getElementById('papersContainer');
+            
+            // Group by main section (Grammar vs Adjacent)
+            const grammarPapers = filtered.filter(p => p.path.startsWith('A Grammar'));
+            const adjacentPapers = filtered.filter(p => p.path.startsWith('Adjacent'));
+
+            let html = '';
+
+            // Render A Grammar of Structure
+            if (grammarPapers.length > 0) {
+                html += '<div class="section"><h2 class="section-title">A Grammar of Structure</h2>';
+                
+                // Group by subsection
+                const sectionOrder = ['orientation', 'core', 'preface', 'main', 
+                    'downstream_ai', 'downstream_america', 'downstream_coherence', 
+                    'downstream_other', 'downstream_impl', 'downstream_masonic', 
+                    'downstream_insight', 'downstream_physics', 
+                    'authorial', 'bindings', 'invariants'];
+                
+                sectionOrder.forEach(sectionKey => {
+                    const sectionPapers = grammarPapers.filter(p => p.section === sectionKey);
+                    if (sectionPapers.length > 0) {
+                        const sectionInfo = sections[sectionKey];
+                        html += `<div class="subsection">
+                            <h3 class="subsection-title">${sectionInfo.title}</h3>
+                            ${sectionInfo.description ? `<p style="color: var(--text-muted); margin-bottom: 1rem;">${sectionInfo.description}</p>` : ''}
+                            <div class="papers-grid">
+                                ${sectionPapers.map(renderPaperCard).join('')}
+                            </div>
+                        </div>`;
+                    }
+                });
+                
+                html += '</div>';
+            }
+
+            // Render Adjacent Papers
+            if (adjacentPapers.length > 0) {
+                html += '<div class="section"><h2 class="section-title">Adjacent Papers</h2>';
+                
+                // Separate core from other adjacent papers
+                const adjacentCore = adjacentPapers.filter(p => p.section === 'adjacent_core');
+                const adjacentOther = adjacentPapers.filter(p => p.section === 'adjacent_papers');
+                
+                if (adjacentCore.length > 0) {
+                    html += `<div class="subsection">
+                        <h3 class="subsection-title">${sections.adjacent_core.title}</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">${sections.adjacent_core.description}</p>
+                        <div class="papers-grid">
+                            ${adjacentCore.map(renderPaperCard).join('')}
+                        </div>
+                    </div>`;
+                }
+                
+                if (adjacentOther.length > 0) {
+                    html += `<div class="subsection">
+                        <h3 class="subsection-title">${sections.adjacent_papers.title}</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem;">${sections.adjacent_papers.description}</p>
+                        <div class="papers-grid">
+                            ${adjacentOther.map(renderPaperCard).join('')}
+                        </div>
+                    </div>`;
+                }
+                
+                html += '</div>';
+            }
+
+            if (html === '') {
+                html = '<p style="text-align: center; color: var(--text-muted); padding: 2rem;">No papers match your search criteria.</p>';
+            }
+
+            container.innerHTML = html;
+        }
+
+        function renderPaperCard(paper) {
+            return `
+                <div class="paper-card">
+                    <a href="${paper.path}" class="paper-link" target="_blank">${paper.title}</a>
+                    <div class="paper-tags">
+                        ${paper.tags.map(tag => `<span class="paper-tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function updateStats() {
+            const filtered = filterPapers();
+            const total = papers.length;
+            const statsEl = document.getElementById('stats');
+            
+            if (searchQuery || activeFilters.size > 0) {
+                statsEl.textContent = `Showing ${filtered.length} of ${total} papers`;
+            } else {
+                statsEl.textContent = `${total} papers available`;
+            }
+        }
+
+        // Start the app
+        init();
+    </script>
+</body>
+</html>
